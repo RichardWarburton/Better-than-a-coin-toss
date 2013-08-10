@@ -276,12 +276,18 @@
                     </aside>
                 </section>
                 <section>
+                    <h2>How much is too much?</h2>
+                    <aside class="notes">
+                        RF can be tuned to over or under fit by setting the number of nodes in a decision tree.
+                        How do you choose that number?
+                        Similar approach to learning curves except insted of controlling number of samples restrict the algoriths ability to over fit.
+                        Gradualy increase the size of the trees. If they decrease together should not be over fitting.
+                        If they diverge then they can fit the training set but it does not generalise to the validation set...probably over fitting.
+                    </aside>
+                </section>
+                <section>
                     <img src="imgs/learning-curve.png" />
                     <aside class="notes">
-                        Similar approach to learning curves except insted of controlling number of samples restrict the algoriths ability to over fit.
-                        Training using random forest creates decision trees. Can limit the size of the trees to limit the ability to over fit.
-                        Gradualy increase the size of the trees. If they decrease together should not be over fitting.
-                        If they diverge beyond a certain point then they are probably over fitting.
                         In our case validation error drops with training error
                         Possible bias problem as error remains fairly high however 10% was acceptable for our purposes
                         Improvement over 64 nodes is relatively small so we can save some clock cycles and limit tree sizes to 64.
