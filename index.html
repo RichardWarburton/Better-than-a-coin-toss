@@ -147,6 +147,48 @@
                     <aside class="notes">
 			</aside>
 		</section>
+		
+		
+		
+		<section>
+                    <h1>Correlation</h1>
+                    <h4>A measure of the strength of dependence between two variables</h4>
+                    <aside class="notes">
+		       Produces a measure that denotes the dependence between variables
+                    </aside>
+                </section>
+                <section>
+                    <h1>Pearson Correlation</h1>
+                    <img src="imgs/pearsons.png" style="float:left"/>
+                    <p>Err...Just look it up</p></br>
+                    
+                    <p>(Assumes linear relationship)<p/>
+                    
+                    <aside class="notes">
+		       Produces a measure that denotes the dependence between variables
+                    </aside>
+                </section>
+		<section>
+                    <table>
+		      <tr><th>Range</th><th>Strength</th></tr>
+		      <tr><td>&lt;0.4</td><td>Weak/No Correlation</td></tr>
+		      <tr><td>&lt;0.7</td><td>Some Correlation</td></tr>
+		      <tr><td>&gt;0.7</td><td>Strong Correlation</td></tr>
+                    </table>
+                    <aside class="notes">
+		       Negatives just as important
+                    </aside>
+                </section>
+		<section>
+                    <img src="imgs/correlation.png" />
+                    <p>Correlation Strength: 0.78453</p>
+                    <aside class="notes">
+			Tie back source of system time
+			Disk IO vs system time
+                        Correlation strength of 0.78453
+                        Generally a strong correlation
+                    </aside>
+                </section>
 				
 				
 				
@@ -163,6 +205,16 @@
 			Variance:
 			Fits training very well, adding more samples does not increase error much
 			CV error is high, but does not reduce much hence they are far apart
+                    </aside>
+                </section>
+                <section>
+                    <img src="imgs/under-fitting.png" />
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section>
+                    <img src="imgs/over-fitting.png" />
+                    <aside class="notes">
                     </aside>
                 </section>
 		<section>
@@ -184,24 +236,15 @@
                         Divergence did happen above 2000 nodes
                     </aside>
                 </section>
+                <section>
+                    <img src="imgs/real-curve.png" />
+                    <aside class="notes">
+			Apply technique to number of samples. Using 64 nodes in the tree
+			Looks reasonably flat, not converging together.
+			Possible bias but error ok for our purposes
+                    </aside>
+                </section>
 				
-		<section>
-                    <h1>Correlation</h1>
-                    <h4>A measure of the strength of linear dependence between two variables</h4>
-                    <aside class="notes">
-		       Produces a measure that denotes the dependence between variables
-                    </aside>
-                </section>
-		<section>
-                    <img src="imgs/correlation.png" />
-                    <p>Correlation Strength: 0.78453</p>
-                    <aside class="notes">
-			Tie back source of system time
-			Disk IO vs system time
-                        Correlation strength of 0.78453
-                        Generally a strong correlation
-                    </aside>
-                </section>
 
 			</div>
 		</div>
