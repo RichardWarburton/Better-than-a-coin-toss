@@ -145,11 +145,70 @@
 
                 <section>
                     <aside class="notes">
-					</aside>
-				</section>
+			</aside>
+		</section>
+				
+				
+				
+		<section>
+		    <h1>Learning Curves</h1>
+                    <aside class="notes">
+			Bias:
+			The less data you have the easier it is to fit, thus error will be low on the training set.
+			However it will not generalise well so high error on validation set.
+			The more data you get the harder it is to fit the training set thus error on training set increases.
+			However the increased number of samples does help fit the validation set (but poorly)
+			Eventualy cv error ~= training error
+			
+			Variance:
+			Fits training very well, adding more samples does not increase error much
+			CV error is high, but does not reduce much hence they are far apart
+                    </aside>
+                </section>
+		<section>
+                    <img src="imgs/learning-curve.png" />
+                    <aside class="notes">
+                        Similar approach to learning curves except insted of controlling number of samples restrict the algoriths ability to over fit.
+                        Training using random forest creates decision trees. Can limit the size of the trees to limit the ability to over fit.
+                        Gradualy increase the size of the trees. If they decrease together should not be over fitting.
+                        If they diverge beyond a certain point then they are probably over fitting.
+			In our case validation error drops with training error
+			Possible bias problem as error remains fairly high however 10% was acceptable for our purposes
+			Improvement over 64 nodes is relatively small so we can save some clock cycles and limit tree sizes to 64.
+			Validation data is also from a different source showing model generalises
+                    </aside>
+                </section>
+		<section>
+                    <img src="imgs/learning-curve2.png" />
+                    <aside class="notes">
+                        Divergence did happen above 2000 nodes
+                    </aside>
+                </section>
+				
+		<section>
+                    <h1>Correlation</h1>
+                    <h4>A measure of the strength of linear dependence between two variables</h4>
+                    <aside class="notes">
+		       Produces a measure that denotes the dependence between variables
+                    </aside>
+                </section>
+		<section>
+                    <img src="imgs/correlation.png" />
+                    <p>Correlation Strength: 0.78453</p>
+                    <aside class="notes">
+			Tie back source of system time
+			Disk IO vs system time
+                        Correlation strength of 0.78453
+                        Generally a strong correlation
+                    </aside>
+                </section>
 
 			</div>
 		</div>
+		
+		
+		
+
 
         <!--
                     @johno_oliver
