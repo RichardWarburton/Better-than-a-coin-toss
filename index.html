@@ -149,7 +149,34 @@
 		</section>
 		
 		
-        
+		<section>
+                    <h1>Fundamentals</h1>
+                    <aside class="notes">
+                        </aside>
+                </section>
+                
+                
+                <section>
+                    <h1>Null Hypothesis</h1>
+                    <p>Until proven otherwise there is no relationship between phenomena</p>
+                    <aside class="notes">
+                        </aside>
+                </section>
+                
+                <section>
+                    <h4>Hypothesis: the loss of my socks is due to alien burglary</h4>
+                    <h4>Null Hypothesis: the loss of my socks is nothing to do with alien burglary</h4>
+                    <aside class="notes">
+                        </aside>
+                </section>
+
+                
+                <section>
+                    <h4>Refuting The Null Hypothesis is to present evidence that there is a relationship</h4>
+                    <aside class="notes">
+                        </aside>
+                </section>
+                
                  <section>
                     <h1>Correlation</h1>
                     <h4>A measure of the strength of dependence between two variables</h4>
@@ -236,8 +263,7 @@
                         shows your idea generalizes
                     </aside>
                 </section>
-                
-                
+
                 <section>
                     <h3>Choose cross validation data wisely</h3>
 
@@ -247,6 +273,56 @@
                             selectively, based on domain knowledge
                         Our example: hardware
                             Check we generalise across hardware by adding samples from hardware not in the training set to the CV
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>Self Validating</h3>
+                    <p>Enemble methods - Train lots of weak classifiers and average</p>
+
+                    <aside class="notes">
+                      self validating
+                        some algorithms validate for you
+                         random forest+oob
+                         only via random sampling
+                         all ensemble methods can validate via out of bag
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>Random Forest and Bagging</h3>
+                    <p>Divide the data into bootstrap sets</p>
+                    <p>Use the rest for calculating error</p>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                
+                <section>
+                    <h3>Monitor Production Data...It changes</h3>
+                    <p>Is it still the same data that you learnt with?<p>
+
+                    <aside class="notes">
+                        monitor all the things in production if possible
+                          input/output
+                          distribution with thresholds
+                          expert eyeballing
+                          stratified sampling
+                          manual classification
+                          precision/recall
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>A/B Test new systems</h3>
+                    <p>Satisfaction/Profit/Traffic...</p>
+                    <aside class="notes">
+                        monitor validation after retraining
+                          A/B Business Metrics
+                          Satisfaction
+                          Belief
+                          Profit
+                          Engagement
+                          Traffic
                     </aside>
                 </section>
 
@@ -308,7 +384,6 @@
                          Possible bias but error ok for our purposes
                     </aside>
                 </section>
-
             </div>
         </div>
 
