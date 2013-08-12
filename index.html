@@ -401,50 +401,235 @@
                 <!-- TODO: consider colour for section start -->
                 <section>
                     <h1>Part 2: Practical Problems</h1>
-                </section>
-
-                <section>
-                    <h1>Part 3: Applying the Theory</h1>
-                </section>
-
-                <section>
-                    <h1>Correlation</h1>
-                    <h4>A measure of the strength of dependence between two variables</h4>
                     <aside class="notes">
-                        Produces a measure that denotes the dependence between variables
+                        Talked a lot about theory - this isn't High School Maths! <br />
+                        what gets in the way of applying the theory
+                    </aside>
+                </section>
+                
+                <section>
+                    <h3>Problem: False Prophets</h3>
+                    <aside class="notes">
                     </aside>
                 </section>
 
                 <section>
-                    <h1>Pearson Correlation</h1>
-                    <img src="imgs/pearsons.png" style="float:left"/>
-                    <p>Err...Just look it up</p></br>
-                    
-                    <p>(Assumes linear relationship)<p/>
-                    
+                    <h3>I'm an expert, listen to me!</h3>
                     <aside class="notes">
-                        Produces a measure that denotes the dependence between variables
+                        Everyone has a pet theory <br />
+                        No one wants to admit they’re wrong
                     </aside>
                 </section>
 
                 <section>
-                    <table>
-                       <tr><th>Range</th><th>Strength</th></tr>
-                       <tr><td>&lt;0.4</td><td>Weak/No Correlation</td></tr>
-                       <tr><td>&lt;0.7</td><td>Some Correlation</td></tr>
-                       <tr><td>&gt;0.7</td><td>Strong Correlation</td></tr>
-                    </table>
+                    <h3>Solution: Establish Goals and Hypothesis then test solutions</h3>
                     <aside class="notes">
-                        Negatives just as important
+                        Don’t be afraid of failure <br />
+                        Don’t try to debate the solution, just set goals and measure outcomes <br />
+                        Test things you think won't work <br />
+                        Success speaks volumes
                     </aside>
                 </section>
+                
                 <section>
-                    <img src="imgs/correlation.png" />
+                    <h3>Problem: Code Quality</h3>
+                    <aside class="notes">
+                        Data Scientists don't <br />
+                        Ariane Rocket <br />
+                        bugs in code cause analytic mistakes
+                    </aside>
+                </section>
+
+                <section>
+                    <img src="imgs/Ariane-5-Flight-501.jpg" />
+                </section>
+
+                <section>
+                    <blockquote>
+                        The internal SRI software exception was caused during execution of a data
+                        conversion from 64-bit floating point to 16-bit signed integer value. The
+                        floating point number which was converted had a value greater than what could
+                        be represented by a 16-bit signed integer. This resulted in an Operand Error.
+                    </blockquote>
+                    <aside class="notes">
+                        Flight 501 Failure - Report by the Inquiry Board <br />
+                        Data analysis failure, algorithm based on sensor data which fails.
+                    </aside>
+                </section>
+                
+                <section>
+                    <h3>Solution: Software Engineering Practices</h3>
+                    <aside class="notes">
+                        Teach your scientists some SE.<br />
+                        Write tests <br />
+                        Treat your R/scikit scripts like the rest of your codebase.
+                    </aside>
+                </section>
+
+                <section>
+                    <blockquote>Everyone Lies</blockquote>
+                    <p>- House</p>
+                    <aside class="notes">
+                        Humans a big source of input data.<br />
+                        Are you asking them, or measuring their behaviour?<br />
+                        Need to survey people sometimes <br />
+                        opinions not objective <br />
+                        maybe not trustworthy
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Solution: Understand Biases and Design around them</h2>
+                </section>
+
+                <section>
+                    <blockquote>Gay couples should have an equal right to get married, not just to have civil partnerships</blockquote>
+                    <p class="fragment">Populus: 65% vs 27%</p>
+
+                    <br />
+                    <br />
+
+                    <blockquote>Marriage should continue to be defined as a life-long exclusive commitment between a man and a woman</blockquote>
+                    <p class="fragment">Comres + Catholic Voices: 22% vs 70%</p>
+                    <aside class="notes">
+                        Leading Questions <br />
+                        Opinion polling on gay marriage. <br />
+                        Catholic Voices commissioned Comres, Newspapers commissioned Populus. <br />
+                    </aside>
+                </section>
+
+            <!-- TODO: examples
+                Social Desirability
+                Solution: Anonymisation
+                
+                Acquiescence
+                Answer yes if there’s a positive connotation
+                Solution: phrase questions neutrally
+                
+                Bias towards the first answer of a question
+                Solution: Randomise the order
+            --> 
+
+                <section>
+                    <h3>What will the next crisis in Washington be?</h3>
+                    <br />
+                    <ul>
+                        <li>Fight over the debt ceiling
+                        <li>Difficulty averting automatic cuts to the Pentagon
+                        <li>Failure to pass basic budget bills
+                        <li>All of the above
+                    </ul>
+
+                    <br />
+                    <br />
+                    <p><small>http://www.foxnews.com/politics/elections/2012/you-decide/what-will-next-crisis-washington-be</small></p>
+                    <aside class="notes">
+                        Poorly Chosen answers <br />
+                        Here an example of deliberate bias. <br />
+                        Easy to do the same in your questioning.
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>Problem: Correlation doesn’t imply Causality</h3>
+                    <aside class="notes">
+                        Post hoc ergo propter hoc
+                        what's the real cause?
+                    </aside>
+                </section>
+                
+                <section>
+                    <h3>Database and network activity correlating</h3>
+                    <aside class="notes">
+                        What is causing what? <br />
+                        correlation can be nonsense
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>Solution: Domain Knowledge</h3>
+                    <aside class="notes">
+                        use domain knowledge to disambiguate causality <br />
+                        Apply performance analysis: look at GC logs and metric data.<br />
+                        turns out the example is a gc problem, pauses fucking everything
+                    </aside>
+                </section>
+                
+                <section>
+                    <img src="imgs/blog_raf_bullet_holes_0.jpg">
+                    <aside class="notes">
+                        WWII - Adding armour in the wrong place caused increased fatalities. <br />
+                        Abraham Wald's recommendation: <br />
+                        adding armour to the places where there were no bullets was the recommended solution <br />
+                    </aside>
+                </section>
+                
+                <section>
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li>Use domain knowledge - ask Pilots
+                        <li>Stratified sample sets
+                        <li>Measure outcomes - are planes surviving more?
+                    </ul>
+
+                    <aside class="notes">
+                        Divide problems into different classes, called strata. <br />
+                        Sample evenly from different strata. <br />
+                        Try to find an appropriate number of shot down planes.  Even if its harder.
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Be Rigorous</h2>
+                    <aside class="notes">
+                        Good Methods <br />
+                        Good Code <br />
+                        Good Data
+                    </aside>
+                </section>
+
+                    <section>
+                        <h1>Part 3: Applying the Theory</h1>
+                    </section>
+
+                    <section>
+                        <h1>Correlation</h1>
+                        <h4>A measure of the strength of dependence between two variables</h4>
+                        <aside class="notes">
+                            Produces a measure that denotes the dependence between variables
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h1>Pearson Correlation</h1>
+                        <img src="imgs/pearsons.png" style="float:left"/>
+                        <p>Err...Just look it up</p></br>
+                        
+                        <p>(Assumes linear relationship)<p/>
+                        
+                        <aside class="notes">
+                            Produces a measure that denotes the dependence between variables
+                        </aside>
+                    </section>
+
+                    <section>
+                        <table>
+                           <tr><th>Range</th><th>Strength</th></tr>
+                           <tr><td>&lt;0.4</td><td>Weak/No Correlation</td></tr>
+                           <tr><td>&lt;0.7</td><td>Some Correlation</td></tr>
+                           <tr><td>&gt;0.7</td><td>Strong Correlation</td></tr>
+                        </table>
+                        <aside class="notes">
+                            Negatives just as important
+                        </aside>
+                    </section>
+                    <section>
+                        <img src="imgs/correlation.png" />
                     <p>Correlation Strength: 0.78453</p>
                     <aside class="notes">
-                        Tie back source of system time
-                        Disk IO vs system time
-                        Correlation strength of 0.78453
+                        Tie back source of system time <br />
+                        Disk IO vs system time <br />
+                        Correlation strength of 0.78453 <br />
                         Generally a strong correlation
                     </aside>
                 </section>
@@ -458,7 +643,7 @@
                     <p>Application of statistics to learn a relationship</p>
                     
                     <aside class="notes">
-                        ideas apply elsewhere
+                        ideas apply elsewhere <br />
                         out of scope to deal with algorithms
                     </aside>
                 </section>
@@ -489,9 +674,9 @@
                     <img src="imgs/cross-validation.png" />
 
                     <aside class="notes">
-                        Avoid over fitting your training set
-                        Hold data back
-                        Re-test on held back data - use that as your measure
+                        Avoid over fitting your training set <br />
+                        Hold data back <br />
+                        Re-test on held back data - use that as your measure <br />
                         shows your idea generalizes
                     </aside>
                 </section>
@@ -500,24 +685,24 @@
                     <h3>Choose cross validation data wisely</h3>
 
                     <aside class="notes">
-                        Sample cross-validation set
-                            Select data randomly
-                            selectively, based on domain knowledge
-                        Our example: hardware
+                        Sample cross-validation set <br />
+                            Select data randomly <br />
+                            selectively, based on domain knowledge <br />
+                        Our example: hardware <br />
                             Check we generalise across hardware by adding samples from hardware not in the training set to the CV
                     </aside>
                 </section>
 
                 <section>
                     <h3>Self Validating</h3>
-                    <p>Enemble methods - Train lots of weak classifiers and average</p>
+                    <p>Ensemble methods - Train lots of weak classifiers and merge</p>
 
                     <aside class="notes">
-                      self validating
-                        some algorithms validate for you
-                         random forest+oob
-                         only via random sampling
-                         all ensemble methods can validate via out of bag
+                      self validating <br />
+                        some algorithms validate for you <br />
+                         random forest+oob <br />
+                         only via random sampling <br />
+                         all ensemble methods can validate via out of bag <br />
                     </aside>
                 </section>
 
@@ -561,16 +746,16 @@
                 <section>
                     <h1>Learning Curves</h1>
                     <aside class="notes">
-                       Bias:
-                          The less data you have the easier it is to fit, thus error will be low on the training set.
-                          However it will not generalise well so high error on validation set.
-                          The more data you get the harder it is to fit the training set thus error on training set increases.
-                          However the increased number of samples does help fit the validation set (but poorly)
+                       Bias: <br />
+                          The less data you have the easier it is to fit, thus error will be low on the training set. <br />
+                          However it will not generalise well so high error on validation set. <br />
+                          The more data you get the harder it is to fit the training set thus error on training set increases. <br />
+                          However the increased number of samples does help fit the validation set (but poorly) <br />
                           Eventualy cv error ~= training error
             
-                       Variance:
-                          Fits training very well, adding more samples does not increase error much
-                          CV error is high, but does not reduce much hence they are far apart
+                       Variance: <br />
+                          Fits training very well, adding more samples does not increase error much <br />
+                          CV error is high, but does not reduce much hence they are far apart <br />
                     </aside>
                 </section>
                 <section>
@@ -586,19 +771,19 @@
                 <section>
                     <h2>How much is too much?</h2>
                     <aside class="notes">
-                        RF can be tuned to over or under fit by setting the number of nodes in a decision tree.
-                        How do you choose that number?
-                        Similar approach to learning curves except insted of controlling number of samples restrict the algoriths ability to over fit.
-                        Gradualy increase the size of the trees. If they decrease together should not be over fitting.
+                        RF can be tuned to over or under fit by setting the number of nodes in a decision tree. <br />
+                        How do you choose that number? <br />
+                        Similar approach to learning curves except insted of controlling number of samples restrict the algoriths ability to over fit. <br />
+                        Gradualy increase the size of the trees. If they decrease together should not be over fitting. <br />
                         If they diverge then they can fit the training set but it does not generalise to the validation set...probably over fitting.
                     </aside>
                 </section>
                 <section>
                     <img src="imgs/learning-curve.png" />
                     <aside class="notes">
-                        In our case validation error drops with training error
-                        Possible bias problem as error remains fairly high however 10% was acceptable for our purposes
-                        Improvement over 64 nodes is relatively small so we can save some clock cycles and limit tree sizes to 64.
+                        In our case validation error drops with training error <br />
+                        Possible bias problem as error remains fairly high however 10% was acceptable for our purposes <br />
+                        Improvement over 64 nodes is relatively small so we can save some clock cycles and limit tree sizes to 64. <br />
                         Validation data is also from a different source showing model generalises
                     </aside>
                 </section>
@@ -611,8 +796,8 @@
                 <section>
                     <img src="imgs/real-curve.png" />
                     <aside class="notes">
-                         Apply technique to number of samples. Using 64 nodes in the tree
-                         Looks reasonably flat, not converging together.
+                         Apply technique to number of samples. Using 64 nodes in the tree <br />
+                         Looks reasonably flat, not converging together. <br />
                          Possible bias but error ok for our purposes
                     </aside>
                 </section>
