@@ -116,7 +116,10 @@
                     <img src="imgs/nate-silver.jpg" />
                     
                     <aside class="notes">
-                        
+                        Politics:
+                            2008 and 2012 elections had predictable results.
+                            Nate Silver combined individual poll ratings.
+                            Dismissed by critics, data proved him right.
 					</aside>
 				</section>
 
@@ -145,45 +148,273 @@
 
                 <section>
                     <aside class="notes">
-			</aside>
-		</section>
+                    </aside>
+                </section>
 		
-		
-		<section>
-                    <h1>Fundamentals</h1>
+                <section>
+                    <h1>Part 1: Fundamentals</h1>
                     <aside class="notes">
-                        </aside>
+                        Talk about fundamentals, by which we mean basic statistics. <br />
+                        Probably familiar to some, but important to cover fundamentals.
+                    </aside>
                 </section>
                 
-                
                 <section>
-                    <h1>Null Hypothesis</h1>
+                    <h2>Null Hypothesis</h2>
                     <p>Until proven otherwise there is no relationship between phenomena</p>
                     <aside class="notes">
-                        </aside>
+                    </aside>
                 </section>
                 
                 <section>
                     <h4>Hypothesis: the loss of my socks is due to alien burglary</h4>
                     <h4>Null Hypothesis: the loss of my socks is nothing to do with alien burglary</h4>
                     <aside class="notes">
-                        </aside>
+                    </aside>
                 </section>
-
                 
                 <section>
                     <h4>Refuting The Null Hypothesis is to present evidence that there is a relationship</h4>
                     <aside class="notes">
-                        </aside>
+                    </aside>
                 </section>
                 
-                 <section>
+                <section>
+                    <h3>When you hear "Wolf!" there is a wolf nearby</h3>
+                    <br />
+                    <table>
+                        <tr>
+                            <td></td>
+                            <th>Cry "Wolf!"</th>
+                            <th>Stay Quiet</th>
+                        </tr>
+                        <tr>
+                            <th>Wolf Nearby</th>
+                            <td>Ok</td>
+                            <td>False Negative</td>
+                        </tr>
+                        <tr>
+                            <th>Its really a chicken!</th>
+                            <td>False Positive</td>
+                            <td>Ok</td>
+                        </tr>
+                    </table>
+                    <br />
+                    <br />
+                    <br />
+                    <aside class="notes">
+                        <h4>False Positives vs False Negatives</h4>
+                        FN or type I error - when the null hypothesis (H0) is true, but is rejected <br />
+                        FP or type II error - when the null hypothesis (H0) is false, but is accepted
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Why is this important?</h2>
+                    <aside class="notes">
+                        FP and FN not equal <br />
+                        Depend on business needs and context. <br />
+                        Different people value them differently.
+                    </aside>
+                </section>
+
+                <section>
+                    <blockquote>It is better that ten guilty persons escape than that one innocent suffer</blockquote>
+                    <p>- William Blackstone</p>
+                    <aside class="notes">
+                        Innocent until proven guilty <br />
+                        The law considers FP more harmful than FN.
+                    </aside>
+                </section>
+
+                <section>
+                    <img src="imgs/sleazy-salesman.jpg" />
+                    <aside class="notes">
+                        Estate Agents would rather show people the wrong house than miss out on a sale.
+                    </aside>
+                </section>
+               
+               <!-- TODO: more logs -->
+                <section>
+                    <h2>Static Analysis</h2>
+                    <img src="imgs/buggy-sm.png" />
+                    <img src="imgs/eclipse3.2.gif" />
+                    <aside class="notes">
+                        Coverity published research findings that low false positive rates are good for business. <br />
+                        If you tell developers there's a bug and there isn't one - they lose confidence in your tooling.
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Cost benefit Analysis</h2>
+                    <ul>
+                        <li>Costs a lot to jail an innocent man
+                        <li>Costs very little to show someone an inappropriate house
+                        <li>Credibility, Liberty, Morality are also costs
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Choose the right measurement</h2>
+                    <aside class="notes">
+                        Most people think of 'accuracy' <br />
+                        Accuracy: what you got right / everything <br />
+                        Not an appropriate measurement for all situations.
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Recall</h2>
+                    <p>number of true positives / number of actually true values</p>
+                    <aside class="notes">
+                        Proportion of true values you've found. <br />
+                        How how much did you get right?<br />
+                        Low score = too many FNs.<br />
+                        Irrational Skeptic (Richard's Dad)
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Precision</h2>
+                    <p>number of true positives / predicted true value</p>
+                    <aside class="notes">
+                        Proportion of your claimed truths which were true. <br />
+                        Low score = too many FPs.<br />
+                        Irrational Optimist (Dot Com Boom)
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>F Measure</h2>
+                    <!-- TODO: fix image -->
+                    <img src="imgs/fmeasure.png" />
+                    <aside class="notes">
+                        Weighted tradeoff between precision and recall. <br />
+                        We need to have a balance between each. <br />
+                        Won't explain formula, go read about it. <br />
+                        F1 = even tradeoff between precision and recall.
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Case Study: Memory Leaks</h2>
+                    <br />
+                    <p>About ~10% of our dataset had memory leaks</p>
+                    <br />
+                    <p>Predict "never leaks memory" ~= 0.9 accuracy, but F1 = 0</p>
+                    <p>Our algorithm ~= 0.9 accuracy and F1 ~= 0.9</p>
+
+                    <aside class="notes">
+                        We designed an algorithm to detect memory leaks using GC Logs. <br />
+                        Had to evaluate several algorithmic choices. <br />
+                        Had to prove we're better than a coin. <br />
+                        Baseline: either say yes or no to everything. <br />
+                        Accounts for inherent bias of an accuracy measure. <br />
+                        Better than re-weighting accuracy.  "never leaks memory" would still be 50%, and that's a rubbish algorithm.
+                    </aside>
+                </section>
+                
+                <section>
+                    <h2>Problem: Reliability of measurement</h2>
+                    <!-- TODO: caching in slide. -->
+                    <aside class="notes">
+                        Common problem in benchmarking <br />
+                        Measurement needs to be reliable and trustworthy.
+                    </aside>
+                </section>
+                        
+                <section>
+                    <h2>Richard's Rule of thumb: If it looks like random noise, it probably is random noise.</h2>
+                </section>
+                
+                <section>
+                    <h2>Solution: Check your data</h2>
+                    <br />
+                    <p>Low standard deviation</p>
+                    <p>Coefficient of Variation = Standard Deviation / Mean <p>
+
+                    <aside class="notes">
+                        Formalise the rule of thumb. <br />
+                        CoV allows you to threshold abstracting away how big your S.D is.
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Caveat: Non-normal distributons</h2>
+                    <img src="imgs/wygh.gif" />
+
+                    <aside class="notes">
+                        For non-normal, the standard deviation can be a terrible estimator of scale. <br />
+                        For example, in the presence of a single outlier, the standard deviation can grossly overestimate the variability of the data <br />
+                        how long people spend reading your blog <br />
+                    </aside>
+                </section>
+
+                <section>
+                    <img src="imgs/black+swan+taleb.jpg" />
+                    <aside class="notes">
+                        <!-- TODO: summarise -->
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Solution: Go MAD</h2>
+                </section>
+                
+                <section>
+                    <h2>Median Absolute Deviation</h2>
+                    <aside class="notes">
+                        replace the use of mean with median when calculating s.d. then divide by median. <br />
+                        More resiliant to outliers. <br />
+                        Used in analysing GC, since S.D. was prone to outlier effects, eg app-server startup times. <br />
+                    </aside>
+                </section>
+                
+                <section>
+                    <h2>Problem: Experimental Flukes</h2>
+                </section>
+                
+                <section>
+                    <h2>Is your A/B testa heisen test?</h2>
+                </section>
+
+                <section>
+                    <h2>Solution: P-Value</h2>
+                    <aside class="notes">
+                        Probability that you’ve fluked your way to the result that you got. <br />
+                        Threshold at 5% or 1%. <br />
+                        formula per distribution <br />
+                            where do you lie <br />
+                            integrate away from the mean <br />
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Science Works - B****es!</h2>
+                    <aside class="notes">
+                        Dawkins or XKCD <br />
+                        find the right measure for your problem <br />
+                        find a way of having confidence in your measurement
+                    </aside>
+                </section>
+
+                <!-- TODO: consider colour for section start -->
+                <section>
+                    <h1>Part 2: Practical Problems</h1>
+                </section>
+
+                <section>
+                    <h1>Part 3: Applying the Theory</h1>
+                </section>
+
+                <section>
                     <h1>Correlation</h1>
                     <h4>A measure of the strength of dependence between two variables</h4>
                     <aside class="notes">
                         Produces a measure that denotes the dependence between variables
                     </aside>
                 </section>
+
                 <section>
                     <h1>Pearson Correlation</h1>
                     <img src="imgs/pearsons.png" style="float:left"/>
@@ -195,6 +426,7 @@
                         Produces a measure that denotes the dependence between variables
                     </aside>
                 </section>
+
                 <section>
                     <table>
                        <tr><th>Range</th><th>Strength</th></tr>
