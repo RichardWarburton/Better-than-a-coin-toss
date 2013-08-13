@@ -38,11 +38,11 @@
 				<section>
 					<h1>Are you better than a Coin Toss?</h1>
 					<h3>by John Oliver and Richard Warburton</h3>
+                    
+                    <img height="300px" src="imgs/2275021-two_face.jpg" />
 
 					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 					</aside>
-
 				</section>
 
 				<section>
@@ -65,7 +65,6 @@
                         <br /> based on science
                         <br /> ML at work
 					</aside>
-
 				</section>
                 
                 <section>
@@ -75,43 +74,21 @@
                         <li>Practical Problems</li>
                         <li>Applying the Theory</li>
                     </ul>
+                    <aside class="notes">
+                        define structure of the talk
+					</aside>
 				</section>
 
                 <section>
-                    <h2>'Experts" aren't very good</h2>
-                    
-                    <img src="imgs/Daniel_KAHNEMAN.jpg" />
-                    
+                    <img src="imgs/Moneyballsbn.jpg" />
                     <aside class="notes">
-                        <br /> Kahneman
-                        <br /> Nobel Prize Winner
-                        <br /> Prospect Theory - explain poor decisions when risk is a factor
+                        Sport - pundits are useless sheep.<br />
+                        Billy Beane managed Oakland Athletics <br />
+                        Bill James developed Sabermetrics <br />
 					</aside>
+				</section>
 
-				</section>
-                
                 <section>
-                    <aside class="notes">
-                        Sports
-					</aside>
-				</section>
-                
-                <section>
-                    <aside class="notes">
-                        meterology
-                        hurricane
-                        http://fivethirtyeight.blogs.nytimes.com/2012/09/09/why-weather-forecasters-are-role-models/
-					</aside>
-				</section>
-                
-                <section>
-                    <aside class="notes">
-                        finance
-					</aside>
-				</section>
-                
-                <section>
-
                     <img src="imgs/tetlock.gif" style="float: left;"/>
                     <img src="imgs/nate-silver.jpg" />
                     
@@ -120,6 +97,34 @@
                             2008 and 2012 elections had predictable results.
                             Nate Silver combined individual poll ratings.
                             Dismissed by critics, data proved him right.
+					</aside>
+				</section>
+                
+                <section>
+                    <img src="imgs/fivethirtyeight-0909-signal1-blog480.png" />
+                    <aside class="notes">
+                        Improvement over time
+                        meterology
+                        hurricane
+					</aside>
+				</section>
+
+                <section>
+                    <h2>'Experts" aren't very good</h2>
+                    <aside class="notes">
+                        Across a wide variety of industries <br />
+                        If just a someone's opinion <br />
+                        people put too much value in their own predictive power
+					</aside>
+				</section>
+
+                <section>
+                    <img src="imgs/111026_SCI_kahneman.jpg.CROP.rectangle3-large.jpg" />
+                    
+                    <aside class="notes">
+                        <br /> Daniel Kahneman and Amos Tversky
+                        <br /> Nobel Prize in Economics Sciences
+                        <br /> Prospect Theory - explain poor decisions when risk is a factor
 					</aside>
 				</section>
 
@@ -140,18 +145,14 @@
                 <section>
                     <h1>Validation = Tests for Data</h1>
                     <aside class="notes">
-                        TODO: pithy line/quote
-                        explain validation
-                        You wouldn’t trust software without testing it - how do you trust your numbers?
+                        explain validation <br />
+                        You wouldn’t trust software without testing it - how do you trust your numbers? <br />
+                        We've all seen the value of automated testing, CI, TDD in software development <br />
+                        big data arena needs to build on that success
 					</aside>
 				</section>
 
-                <section>
-                    <aside class="notes">
-                    </aside>
-                </section>
-		
-                <section>
+                <section data-transition="linear" data-background="#007777" data-background-transition="slide">
                     <h1>Part 1: Fundamentals</h1>
                     <aside class="notes">
                         Talk about fundamentals, by which we mean basic statistics. <br />
@@ -163,12 +164,16 @@
                     <h2>Null Hypothesis</h2>
                     <p>Until proven otherwise there is no relationship between phenomena</p>
                     <aside class="notes">
+                        <p>Refuting The Null Hypothesis is to present evidence that there is a relationship</p>
+                        <p>Hypothesis: the loss of my socks is due to alien burglary</p>
+                        <p>Null Hypothesis: the loss of my socks is not caused by an alien burglary</p>
                     </aside>
                 </section>
-                
+               
+               <!--
                 <section>
                     <h4>Hypothesis: the loss of my socks is due to alien burglary</h4>
-                    <h4>Null Hypothesis: the loss of my socks is nothing to do with alien burglary</h4>
+                    <h4>Null Hypothesis: the loss of my socks is not caused by an alien burglary</h4>
                     <aside class="notes">
                     </aside>
                 </section>
@@ -178,7 +183,9 @@
                     <aside class="notes">
                     </aside>
                 </section>
-                
+                -->
+
+                <!-- TOOD: improve table formatting -->
                 <section>
                     <h3>When you hear "Wolf!" there is a wolf nearby</h3>
                     <br />
@@ -234,14 +241,18 @@
                     </aside>
                 </section>
                
-               <!-- TODO: more logs -->
                 <section>
                     <h2>Static Analysis</h2>
-                    <img src="imgs/buggy-sm.png" />
-                    <img src="imgs/eclipse3.2.gif" />
+                    <img height="128px" src="imgs/eclipse3.2.gif" />
+                    <img height="128px" src="imgs/pmd_logo.png" />
+                    <img height="128px" src="imgs/buggy-sm.png" />
+                    <img height="128px" src="imgs/coverity.jpg" />
                     <aside class="notes">
                         Coverity published research findings that low false positive rates are good for business. <br />
-                        If you tell developers there's a bug and there isn't one - they lose confidence in your tooling.
+                        If you tell developers there's a bug and there isn't one - they lose confidence in your tooling. <br />
+                        But they aren't expecting you to find all the bugs in their code. <br />
+                        Bill Pugh - started findbugs sometimes recommends that people run it once on their codebase and then
+                        ignore all those warnings.  If its working in production, its likely not an important bug.
                     </aside>
                 </section>
 
@@ -256,6 +267,7 @@
 
                 <section>
                     <h2>Choose the right measurement</h2>
+                    <p>There's more than one concept of accuracy</p>
                     <aside class="notes">
                         Most people think of 'accuracy' <br />
                         Accuracy: what you got right / everything <br />
@@ -287,7 +299,7 @@
                 <section>
                     <h2>F Measure</h2>
                     <!-- TODO: fix image -->
-                    <img src="imgs/fmeasure.png" />
+                    <img src="imgs/fmeasure.jpg" />
                     <aside class="notes">
                         Weighted tradeoff between precision and recall. <br />
                         We need to have a balance between each. <br />
@@ -315,7 +327,7 @@
                 </section>
                 
                 <section>
-                    <h2>Problem: Reliability of measurement</h2>
+                    <h3>Problem: Reliability of measurement</h3>
                     <!-- TODO: caching in slide. -->
                     <aside class="notes">
                         Common problem in benchmarking <br />
@@ -324,13 +336,15 @@
                 </section>
                         
                 <section>
-                    <h2>Richard's Rule of thumb: If it looks like random noise, it probably is random noise.</h2>
+                    <h3>Rule of thumb</h3>
+                    <p>If it looks like random noise, it probably is random noise.</p>
                 </section>
                 
                 <section>
-                    <h2>Solution: Check your data</h2>
+                    <h3>Solution: Check your data</h3>
                     <br />
-                    <p>Low standard deviation</p>
+                    <p>Low Standard Deviation</p>
+                    <img src="imgs/standard-deviation.jpg" />
                     <p>Coefficient of Variation = Standard Deviation / Mean <p>
 
                     <aside class="notes">
@@ -340,8 +354,8 @@
                 </section>
 
                 <section>
-                    <h2>Caveat: Non-normal distributons</h2>
-                    <img src="imgs/wygh.gif" />
+                    <h3>Caveat: Non-normal distributons</h3>
+                    <img src="imgs/wygh.jpg" />
 
                     <aside class="notes">
                         For non-normal, the standard deviation can be a terrible estimator of scale. <br />
@@ -363,7 +377,7 @@
                 
                 <section>
                     <h3>Median Absolute Deviation</h3>
-                    <img src="imgs/mad.png" />
+                    <img src="imgs/mad.jpg" />
                     <aside class="notes">
                         replace the use of mean with median when calculating s.d. then divide by median. <br />
                         More resiliant to outliers. <br />
@@ -381,10 +395,12 @@
 
                 <section>
                     <h3>Solution: P-Value</h3>
+                    <img src="imgs/P-value_Graph.jpg" />
                     <aside class="notes">
                         Probability that you’ve fluked your way to the result that you got. <br />
                         Threshold at 5% or 1%. <br />
                         formula per distribution <br />
+                            google it <br />
                             where do you lie <br />
                             integrate away from the mean <br />
                     </aside>
@@ -542,9 +558,11 @@
                 
                 <section>
                     <h3>Database and network activity correlating</h3>
+                    <p>Performance Diagnosis: was actually a GC Problem.</p>
                     <aside class="notes">
                         What is causing what? <br />
-                        correlation can be nonsense
+                        correlation can be nonsense <br />
+                        Common root cause: GC pause affected both Networking and DB threads.
                     </aside>
                 </section>
 
@@ -552,11 +570,11 @@
                     <h3>Solution: Domain Knowledge</h3>
                     <aside class="notes">
                         use domain knowledge to disambiguate causality <br />
-                        Apply performance analysis: look at GC logs and metric data.<br />
-                        turns out the example is a gc problem, pauses fucking everything
+                        understand the mechanics at play and model them. <br />
+                        We'll come back to correlation later in the talk.
                     </aside>
                 </section>
-                
+
                 <section>
                     <img src="imgs/blog_raf_bullet_holes_0.jpg">
                     <aside class="notes">
@@ -714,16 +732,16 @@
             
             <section>
                 <h3>Monitor Production Data...It changes</h3>
-                <p>Is it still the same data that you learnt with?<p>
+                <p>Does it look like the same data that you learnt with?<p>
 
                 <aside class="notes">
-                    monitor all the things in production if possible
-                      input/output
-                      distribution with thresholds
-                      expert eyeballing
-                      stratified sampling
-                      manual classification
-                      precision/recall
+                    monitor all the things in production if possible <br />
+                      input/output <br />
+                      distribution with thresholds <br />
+                      expert eyeballing <br />
+                      stratified sampling <br />
+                      manual classification <br />
+                      precision/recall <br />
                 </aside>
             </section>
 
@@ -731,13 +749,13 @@
                 <h3>A/B Test new systems</h3>
                 <p>Satisfaction/Profit/Traffic...</p>
                 <aside class="notes">
-                    monitor validation after retraining
-                      A/B Business Metrics
-                      Satisfaction
-                      Belief
-                      Profit
-                      Engagement
-                      Traffic
+                    monitor validation after retraining <br />
+                      A/B Business Metrics <br />
+                      Satisfaction <br />
+                      Belief <br />
+                      Profit <br />
+                      User Engagement <br />
+                      Traffic <br />
                 </aside>
             </section>
 
