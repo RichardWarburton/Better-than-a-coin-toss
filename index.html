@@ -362,7 +362,8 @@
                 </section>
                 
                 <section>
-                    <h2>Median Absolute Deviation</h2>
+                    <h3>Median Absolute Deviation</h3>
+                    <img src="imgs/mad.png" />
                     <aside class="notes">
                         replace the use of mean with median when calculating s.d. then divide by median. <br />
                         More resiliant to outliers. <br />
@@ -371,15 +372,15 @@
                 </section>
                 
                 <section>
-                    <h2>Problem: Experimental Flukes</h2>
+                    <h3>Problem: Experimental Flukes</h3>
                 </section>
                 
                 <section>
-                    <h2>Is your A/B testa heisen test?</h2>
+                    <h3>Is your A/B test a heisen test?</h3>
                 </section>
 
                 <section>
-                    <h2>Solution: P-Value</h2>
+                    <h3>Solution: P-Value</h3>
                     <aside class="notes">
                         Probability that you’ve fluked your way to the result that you got. <br />
                         Threshold at 5% or 1%. <br />
@@ -398,9 +399,9 @@
                     </aside>
                 </section>
 
-                <!-- TODO: consider colour for section start -->
-                <section>
-                    <h1>Part 2: Practical Problems</h1>
+                <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+                    <h1>Practical Problems</h1>
+                    <h3>Part 2</h3>
                     <aside class="notes">
                         Talked a lot about theory - this isn't High School Maths! <br />
                         what gets in the way of applying the theory <br />
@@ -589,278 +590,278 @@
                     </aside>
                 </section>
 
-                    <section>
-                        <h1>Part 3: Applying the Theory</h1>
-                    </section>
+                <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+                    <h1>Part 3: Applying the Theory</h1>
+                </section>
 
-                    <section>
-                        <h1>Correlation</h1>
-                        <h4>A measure of the strength of dependence between two variables</h4>
-                        <aside class="notes">
-                            Produces a measure that denotes the dependence between variables
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h1>Pearson Correlation</h1>
-                        <img src="imgs/pearsons.png" style="float:left"/>
-                        <p>Err...Just look it up</p></br>
-                        
-                        <p>(Assumes linear relationship)<p/>
-                        
-                        <aside class="notes">
-                            Produces a measure that denotes the dependence between variables
-                        </aside>
-                    </section>
-
-                    <section>
-                        <table>
-                           <tr><th>Range</th><th>Strength</th></tr>
-                           <tr><td>&lt;0.4</td><td>Weak/No Correlation</td></tr>
-                           <tr><td>&lt;0.7</td><td>Some Correlation</td></tr>
-                           <tr><td>&gt;0.7</td><td>Strong Correlation</td></tr>
-                        </table>
-                        <aside class="notes">
-                            Negatives just as important
-                        </aside>
-                    </section>
-                    <section>
-                        <img src="imgs/correlation.png" />
-                    <p>Correlation Strength: 0.78453</p>
+                <section>
+                    <h1>Correlation</h1>
+                    <h4>A measure of the strength of dependence between two variables</h4>
                     <aside class="notes">
-                        Tie back source of system time <br />
-                        Disk IO vs system time <br />
-                        Correlation strength of 0.78453 <br />
-                        Generally a strong correlation
+                        Produces a measure that denotes the dependence between variables
                     </aside>
                 </section>
-                
+
                 <section>
-                    <h1>Machine Learning</h1>
-                    <p>Application of statistics to learn a relationship</p>
+                    <h1>Pearson Correlation</h1>
+                    <img src="imgs/pearsons.png" style="float:left"/>
+                    <p>Err...Just look it up</p></br>
+                    
+                    <p>(Assumes linear relationship)<p/>
                     
                     <aside class="notes">
-                        ideas apply elsewhere <br />
-                        out of scope to deal with algorithms
-                    </aside>
-                </section>
-                
-
-                <section>
-                    <h1>Fitting</h1>
-                    <img src="imgs/fitting.png" />
-
-                    <aside class="notes">
-                    </aside>
-                </section>
-                <section>
-                    <h1>Fitting</h1>
-                    <img src="imgs/fitting-new-point.png" />
-
-                    <aside class="notes">
-                    </aside>
-                </section>
-                
-                
-                <section>
-                    <h1>Solution:</h1>
-                    <h1>Cross Validation</h1>
-                </section>
-                
-                <section>
-                    <img src="imgs/cross-validation.png" />
-
-                    <aside class="notes">
-                        Avoid over fitting your training set <br />
-                        Hold data back <br />
-                        Re-test on held back data - use that as your measure <br />
-                        shows your idea generalizes
+                        Produces a measure that denotes the dependence between variables
                     </aside>
                 </section>
 
                 <section>
-                    <h3>Choose cross validation data wisely</h3>
-
+                    <table>
+                       <tr><th>Range</th><th>Strength</th></tr>
+                       <tr><td>&lt;0.4</td><td>Weak/No Correlation</td></tr>
+                       <tr><td>&lt;0.7</td><td>Some Correlation</td></tr>
+                       <tr><td>&gt;0.7</td><td>Strong Correlation</td></tr>
+                    </table>
                     <aside class="notes">
-                        Sample cross-validation set <br />
-                            Select data randomly <br />
-                            selectively, based on domain knowledge <br />
-                        Our example: hardware <br />
-                            Check we generalise across hardware by adding samples from hardware not in the training set to the CV
+                        Negatives just as important
                     </aside>
                 </section>
-
                 <section>
-                    <h3>Self Validating</h3>
-                    <p>Ensemble methods - Train lots of weak classifiers and merge</p>
-
-                    <aside class="notes">
-                      self validating <br />
-                        some algorithms validate for you <br />
-                         random forest+oob <br />
-                         only via random sampling <br />
-                         all ensemble methods can validate via out of bag <br />
-                    </aside>
-                </section>
-
-                <section>
-                    <h3>Random Forest and Bagging</h3>
-                    <p>Divide the data into bootstrap sets</p>
-                    <p>Use the rest for calculating error</p>
-                    <aside class="notes">
-                    </aside>
-                </section>
-                
-                <section>
-                    <h3>Monitor Production Data...It changes</h3>
-                    <p>Is it still the same data that you learnt with?<p>
-
-                    <aside class="notes">
-                        monitor all the things in production if possible
-                          input/output
-                          distribution with thresholds
-                          expert eyeballing
-                          stratified sampling
-                          manual classification
-                          precision/recall
-                    </aside>
-                </section>
-
-                <section>
-                    <h3>A/B Test new systems</h3>
-                    <p>Satisfaction/Profit/Traffic...</p>
-                    <aside class="notes">
-                        monitor validation after retraining
-                          A/B Business Metrics
-                          Satisfaction
-                          Belief
-                          Profit
-                          Engagement
-                          Traffic
-                    </aside>
-                </section>
-
-                <section>
-                    <h1>Learning Curves</h1>
-                    <aside class="notes">
-                       Bias: <br />
-                          The less data you have the easier it is to fit, thus error will be low on the training set. <br />
-                          However it will not generalise well so high error on validation set. <br />
-                          The more data you get the harder it is to fit the training set thus error on training set increases. <br />
-                          However the increased number of samples does help fit the validation set (but poorly) <br />
-                          Eventualy cv error ~= training error
+                    <img src="imgs/correlation.png" />
+                <p>Correlation Strength: 0.78453</p>
+                <aside class="notes">
+                    Tie back source of system time <br />
+                    Disk IO vs system time <br />
+                    Correlation strength of 0.78453 <br />
+                    Generally a strong correlation
+                </aside>
+            </section>
             
-                       Variance: <br />
-                          Fits training very well, adding more samples does not increase error much <br />
-                          CV error is high, but does not reduce much hence they are far apart <br />
-                    </aside>
-                </section>
-                <section>
-                    <img src="imgs/under-fitting.png" />
-                    <aside class="notes">
-                    </aside>
-                </section>
-                <section>
-                    <img src="imgs/over-fitting.png" />
-                    <aside class="notes">
-                    </aside>
-                </section>
-                <section>
-                    <h2>How much is too much?</h2>
-                    <aside class="notes">
-                        RF can be tuned to over or under fit by setting the number of nodes in a decision tree. <br />
-                        How do you choose that number? <br />
-                        Similar approach to learning curves except insted of controlling number of samples restrict the algoriths ability to over fit. <br />
-                        Gradualy increase the size of the trees. If they decrease together should not be over fitting. <br />
-                        If they diverge then they can fit the training set but it does not generalise to the validation set...probably over fitting.
-                    </aside>
-                </section>
-                <section>
-                    <img src="imgs/learning-curve.png" />
-                    <aside class="notes">
-                        In our case validation error drops with training error <br />
-                        Possible bias problem as error remains fairly high however 10% was acceptable for our purposes <br />
-                        Improvement over 64 nodes is relatively small so we can save some clock cycles and limit tree sizes to 64. <br />
-                        Validation data is also from a different source showing model generalises
-                    </aside>
-                </section>
+            <section>
+                <h1>Machine Learning</h1>
+                <p>Application of statistics to learn a relationship</p>
                 
-                <section>
-                    <img src="imgs/learning-curve2.png" />
-                    <aside class="notes">
-                        Divergence did happen above 2000 nodes
-                    </aside>
-                </section>
+                <aside class="notes">
+                    ideas apply elsewhere <br />
+                    out of scope to deal with algorithms
+                </aside>
+            </section>
+            
 
-                <section>
-                    <img src="imgs/bad-learning-curves.png" />
-                    <aside class="notes">
-                        Ask the audience: what's weird? <br />
-                        Cross Validation error is too low - this is actually a bug in one of our R scripts.
-                    </aside>
-                </section>
+            <section>
+                <h1>Fitting</h1>
+                <img src="imgs/fitting.png" />
 
-                <section>
-                    <img src="imgs/real-curve.png" />
-                    <aside class="notes">
-                         Apply technique to number of samples. Using 64 nodes in the tree <br />
-                         Looks reasonably flat, not converging together. <br />
-                         Possible bias but error ok for our purposes
-                    </aside>
-                </section>
-                
-                <section>
-                    <h1>Conclusion</h1>
-                    <ul>
-                        <li>Analytics are increasingly important
-                        <li>Wide variety of statistical and practical tips to get them right
-                        <li>Have fun and Best of luck!
-                    </ul>
-                    <aside class="notes">
-                    </aside>
-                </section>
+                <aside class="notes">
+                </aside>
+            </section>
+            <section>
+                <h1>Fitting</h1>
+                <img src="imgs/fitting-new-point.png" />
 
-                <section>
-                    <h1>Questions?</h1>
-                    @johno_oliver <br />
-                    @RichardWarburto <br />
-                    <a href="http://insightfullogic.com">http://insightfullogic.com</a><br />
-                </section>
+                <aside class="notes">
+                </aside>
+            </section>
+            
+            
+            <section>
+                <h1>Solution:</h1>
+                <h1>Cross Validation</h1>
+            </section>
+            
+            <section>
+                <img src="imgs/cross-validation.png" />
 
-            </div>
+                <aside class="notes">
+                    Avoid over fitting your training set <br />
+                    Hold data back <br />
+                    Re-test on held back data - use that as your measure <br />
+                    shows your idea generalizes
+                </aside>
+            </section>
+
+            <section>
+                <h3>Choose cross validation data wisely</h3>
+
+                <aside class="notes">
+                    Sample cross-validation set <br />
+                        Select data randomly <br />
+                        selectively, based on domain knowledge <br />
+                    Our example: hardware <br />
+                        Check we generalise across hardware by adding samples from hardware not in the training set to the CV
+                </aside>
+            </section>
+
+            <section>
+                <h3>Self Validating</h3>
+                <p>Ensemble methods - Train lots of weak classifiers and merge</p>
+
+                <aside class="notes">
+                  self validating <br />
+                    some algorithms validate for you <br />
+                     random forest+oob <br />
+                     only via random sampling <br />
+                     all ensemble methods can validate via out of bag <br />
+                </aside>
+            </section>
+
+            <section>
+                <h3>Random Forest and Bagging</h3>
+                <p>Divide the data into bootstrap sets</p>
+                <p>Use the rest for calculating error</p>
+                <aside class="notes">
+                </aside>
+            </section>
+            
+            <section>
+                <h3>Monitor Production Data...It changes</h3>
+                <p>Is it still the same data that you learnt with?<p>
+
+                <aside class="notes">
+                    monitor all the things in production if possible
+                      input/output
+                      distribution with thresholds
+                      expert eyeballing
+                      stratified sampling
+                      manual classification
+                      precision/recall
+                </aside>
+            </section>
+
+            <section>
+                <h3>A/B Test new systems</h3>
+                <p>Satisfaction/Profit/Traffic...</p>
+                <aside class="notes">
+                    monitor validation after retraining
+                      A/B Business Metrics
+                      Satisfaction
+                      Belief
+                      Profit
+                      Engagement
+                      Traffic
+                </aside>
+            </section>
+
+            <section>
+                <h1>Learning Curves</h1>
+                <aside class="notes">
+                   Bias: <br />
+                      The less data you have the easier it is to fit, thus error will be low on the training set. <br />
+                      However it will not generalise well so high error on validation set. <br />
+                      The more data you get the harder it is to fit the training set thus error on training set increases. <br />
+                      However the increased number of samples does help fit the validation set (but poorly) <br />
+                      Eventualy cv error ~= training error
+        
+                   Variance: <br />
+                      Fits training very well, adding more samples does not increase error much <br />
+                      CV error is high, but does not reduce much hence they are far apart <br />
+                </aside>
+            </section>
+            <section>
+                <img src="imgs/under-fitting.png" />
+                <aside class="notes">
+                </aside>
+            </section>
+            <section>
+                <img src="imgs/over-fitting.png" />
+                <aside class="notes">
+                </aside>
+            </section>
+            <section>
+                <h2>How much is too much?</h2>
+                <aside class="notes">
+                    RF can be tuned to over or under fit by setting the number of nodes in a decision tree. <br />
+                    How do you choose that number? <br />
+                    Similar approach to learning curves except insted of controlling number of samples restrict the algoriths ability to over fit. <br />
+                    Gradualy increase the size of the trees. If they decrease together should not be over fitting. <br />
+                    If they diverge then they can fit the training set but it does not generalise to the validation set...probably over fitting.
+                </aside>
+            </section>
+            <section>
+                <img src="imgs/learning-curve.png" />
+                <aside class="notes">
+                    In our case validation error drops with training error <br />
+                    Possible bias problem as error remains fairly high however 10% was acceptable for our purposes <br />
+                    Improvement over 64 nodes is relatively small so we can save some clock cycles and limit tree sizes to 64. <br />
+                    Validation data is also from a different source showing model generalises
+                </aside>
+            </section>
+            
+            <section>
+                <img src="imgs/learning-curve2.png" />
+                <aside class="notes">
+                    Divergence did happen above 2000 nodes
+                </aside>
+            </section>
+
+            <section>
+                <img src="imgs/bad-learning-curves.png" />
+                <aside class="notes">
+                    Ask the audience: what's weird? <br />
+                    Cross Validation error is too low - this is actually a bug in one of our R scripts.
+                </aside>
+            </section>
+
+            <section>
+                <img src="imgs/real-curve.png" />
+                <aside class="notes">
+                     Apply technique to number of samples. Using 64 nodes in the tree <br />
+                     Looks reasonably flat, not converging together. <br />
+                     Possible bias but error ok for our purposes
+                </aside>
+            </section>
+            
+            <section>
+                <h1>Conclusion</h1>
+                <ul>
+                    <li>Analytics are increasingly important
+                    <li>Wide variety of statistical and practical tips to get them right
+                    <li>Have fun and Best of luck!
+                </ul>
+                <aside class="notes">
+                </aside>
+            </section>
+
+            <section>
+                <h1>Questions?</h1>
+                @johno_oliver <br />
+                @RichardWarburto <br />
+                <a href="http://insightfullogic.com">http://insightfullogic.com</a><br />
+            </section>
+
         </div>
+    </div>
 
-		<script src="reveal.js/lib/js/head.min.js"></script>
-		<script src="reveal.js/js/reveal.min.js"></script>
+    <script src="reveal.js/lib/js/head.min.js"></script>
+    <script src="reveal.js/js/reveal.min.js"></script>
 
-		<script>
+    <script>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimelreveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+        // Full list of configuration options available here:
+        // https://github.com/hakimelreveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
-					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+                // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+            ]
+        });
 
-		</script>
+    </script>
 
-	</body>
+</body>
 </html>
 
