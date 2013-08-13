@@ -846,30 +846,33 @@
             <section>
                 <h1>Learning Curves</h1>
                 <aside class="notes">
+        
+                </aside>
+            </section>
+            <section>
+                <img src="imgs/under-fitting.png" />
+                <aside class="notes">
                    Bias: <br />
                       The less data you have the easier it is to fit, thus error will be low on the training set. <br />
                       However it will not generalise well so high error on validation set. <br />
                       The more data you get the harder it is to fit the training set thus error on training set increases. <br />
                       However the increased number of samples does help fit the validation set (but poorly) <br />
                       Eventualy cv error ~= training error
-        
+                </aside>
+            </section>
+            <section>
+                <img src="imgs/over-fitting.png" />
+                <aside class="notes">
                    Variance: <br />
                       Fits training very well, adding more samples does not increase error much <br />
                       CV error is high, but does not reduce much hence they are far apart <br />
                 </aside>
             </section>
             <section>
-                <img src="imgs/under-fitting.png" />
-                <aside class="notes">
-                </aside>
-            </section>
-            <section>
-                <img src="imgs/over-fitting.png" />
-                <aside class="notes">
-                </aside>
-            </section>
-            <section>
                 <h2>How much is too much?</h2>
+                
+                <img src="imgs/smallTree.png"/>
+                <img src="imgs/tree.png"/>
                 <aside class="notes">
                     RF can be tuned to over or under fit by setting the number of nodes in a decision tree. <br />
                     How do you choose that number? <br />
