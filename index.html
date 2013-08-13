@@ -808,6 +808,32 @@
             </section>
 
             <section>
+                <h3>How many clusters?</h3>
+                <img src="imgs/Cluster-2.jpg" />
+                <aside class="notes">
+                    Clustering - grouping sets of similar objects <br />
+                    Some clustering algorithms, eg kmeans, have a parameter of number of clusters <br />
+                    Tradeoff: smaller clusters = is more grouped together, but less value in grouping.
+                </aside>
+            </section>
+
+            <section>
+                <h3>Where's the elbow?</h3>
+                <img src="imgs/DataClustering_ElbowCriterion.JPG" />
+                <aside class="notes">
+                Explain Hyper Parameter Optimisation <br />
+                Show a graph - point out the elbow <br />
+                determine some k <br />
+                for k in min, min + 1... <br />
+                    validation_error(k) / k <br />
+                    or validation_error(k) / fn(k) <br />
+                    stop if you drop <br />
+                    relies on validation being monotonically increasing for k <br />
+                    bigger k suggests overfitting
+                </aside>
+            </section>
+
+            <section>
                 <h1>Learning Curves</h1>
                 <aside class="notes">
                    Bias: <br />
