@@ -719,7 +719,32 @@
                 </aside>
             </section>
             
+            <section>
+                <h3>How many clusters?</h3>
+                <img src="imgs/Cluster-2.jpg" />
+                <aside class="notes">
+                    Clustering - grouping sets of similar objects <br />
+                    Some clustering algorithms, eg kmeans, have a parameter of number of clusters <br />
+                    Tradeoff: smaller clusters = is more grouped together, but less value in grouping.
+                </aside>
+            </section>
 
+            <section>
+                <h3>Where's the elbow?</h3>
+                <img src="imgs/DataClustering_ElbowCriterion.JPG" />
+                <aside class="notes">
+                Explain Hyper Parameter Optimisation <br />
+                Show a graph - point out the elbow <br />
+                determine some k <br />
+                for k in min, min + 1... <br />
+                    validation_error(k) / k <br />
+                    or validation_error(k) / fn(k) <br />
+                    stop if you drop <br />
+                    relies on validation being monotonically increasing for k <br />
+                    bigger k suggests overfitting
+                </aside>
+            </section>
+            
             <section>
                 <h1>Fitting</h1>
                 <img src="imgs/fitting.png" />
@@ -789,62 +814,13 @@
             </section>
             
             <section>
-                <h3>Monitor Production Data...It changes</h3>
-                <p>Does it look like the same data that you learnt with?<p>
-
-                <aside class="notes">
-                    monitor all the things in production if possible <br />
-                      input/output <br />
-                      distribution with thresholds <br />
-                      expert eyeballing <br />
-                      stratified sampling <br />
-                      manual classification <br />
-                      precision/recall <br />
-                </aside>
-            </section>
-
-            <section>
-                <h3>A/B Test new systems</h3>
-                <p>Satisfaction/Profit/Traffic...</p>
-                <aside class="notes">
-                    monitor validation after retraining <br />
-                      A/B Business Metrics <br />
-                      Satisfaction <br />
-                      Belief <br />
-                      Profit <br />
-                      User Engagement <br />
-                      Traffic <br />
-                </aside>
-            </section>
-
-            <section>
-                <h3>How many clusters?</h3>
-                <img src="imgs/Cluster-2.jpg" />
-                <aside class="notes">
-                    Clustering - grouping sets of similar objects <br />
-                    Some clustering algorithms, eg kmeans, have a parameter of number of clusters <br />
-                    Tradeoff: smaller clusters = is more grouped together, but less value in grouping.
-                </aside>
-            </section>
-
-            <section>
-                <h3>Where's the elbow?</h3>
-                <img src="imgs/DataClustering_ElbowCriterion.JPG" />
-                <aside class="notes">
-                Explain Hyper Parameter Optimisation <br />
-                Show a graph - point out the elbow <br />
-                determine some k <br />
-                for k in min, min + 1... <br />
-                    validation_error(k) / k <br />
-                    or validation_error(k) / fn(k) <br />
-                    stop if you drop <br />
-                    relies on validation being monotonically increasing for k <br />
-                    bigger k suggests overfitting
-                </aside>
-            </section>
-
-            <section>
                 <h1>Learning Curves</h1>
+                <aside class="notes">
+        
+                </aside>
+            </section>
+            <section>
+                <img src="imgs/under-fitting.png" />
                 <aside class="notes">
                    Bias: <br />
                       The less data you have the easier it is to fit, thus error will be low on the training set. <br />
@@ -852,24 +828,21 @@
                       The more data you get the harder it is to fit the training set thus error on training set increases. <br />
                       However the increased number of samples does help fit the validation set (but poorly) <br />
                       Eventualy cv error ~= training error
-        
+                </aside>
+            </section>
+            <section>
+                <img src="imgs/over-fitting.png" />
+                <aside class="notes">
                    Variance: <br />
                       Fits training very well, adding more samples does not increase error much <br />
                       CV error is high, but does not reduce much hence they are far apart <br />
                 </aside>
             </section>
             <section>
-                <img src="imgs/under-fitting.png" />
-                <aside class="notes">
-                </aside>
-            </section>
-            <section>
-                <img src="imgs/over-fitting.png" />
-                <aside class="notes">
-                </aside>
-            </section>
-            <section>
                 <h2>How much is too much?</h2>
+                
+                <img src="imgs/smallTree.png"/>
+                <img src="imgs/tree.png"/>
                 <aside class="notes">
                     RF can be tuned to over or under fit by setting the number of nodes in a decision tree. <br />
                     How do you choose that number? <br />
@@ -909,6 +882,35 @@
                      Apply technique to number of samples. Using 64 nodes in the tree <br />
                      Looks reasonably flat, not converging together. <br />
                      Possible bias but error ok for our purposes
+                </aside>
+            </section>
+            
+            <section>
+                <h3>Monitor Production Data...It changes</h3>
+                <p>Does it look like the same data that you learnt with?<p>
+
+                <aside class="notes">
+                    monitor all the things in production if possible <br />
+                      input/output <br />
+                      distribution with thresholds <br />
+                      expert eyeballing <br />
+                      stratified sampling <br />
+                      manual classification <br />
+                      precision/recall <br />
+                </aside>
+            </section>
+
+            <section>
+                <h3>A/B Test new systems</h3>
+                <p>Satisfaction/Profit/Traffic...</p>
+                <aside class="notes">
+                    monitor validation after retraining <br />
+                      A/B Business Metrics <br />
+                      Satisfaction <br />
+                      Belief <br />
+                      Profit <br />
+                      User Engagement <br />
+                      Traffic <br />
                 </aside>
             </section>
             
