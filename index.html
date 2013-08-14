@@ -461,9 +461,12 @@
                 
                 <section>
                     <h3>Problem: Code Quality</h3>
+                    <blockquote>The math works :-) the code does not :-(</blockquote>
+                    <p>@headinthebox</p>
                     <aside class="notes">
-                        Data Scientists don't <br />
-                        bugs in code cause analytic mistakes
+                        bugs in code cause analytic mistakes <br />
+                        quote by Erik Meijer - Rx.net and worked on c# compiler team <br />
+                        Sometimes scientists not professional coders or software craftsmen.
                     </aside>
                 </section>
 
@@ -603,7 +606,8 @@
                     <section>
                         <h3>Problem: Correlation doesn’t imply Causality</h3>
                         <aside class="notes">
-                            Post hoc ergo propter hoc
+                            Moving on from biases <br />
+                            Post hoc ergo propter hoc <br />
                             what's the real cause?
                         </aside>
                     </section>
@@ -630,7 +634,7 @@
                 <section>
                     <img src="imgs/blog_raf_bullet_holes_0.jpg">
                     <aside class="notes">
-                        WWII - Adding armour in the wrong place caused increased fatalities. <br />
+                        WWII - Adding armour in the wrong place didn't improve matters. <br />
                         Abraham Wald's recommendation: <br />
                         adding armour to the places where there were no bullets was the recommended solution <br />
                     </aside>
@@ -654,6 +658,7 @@
                 <section>
                     <h2>Be Rigorous</h2>
                     <aside class="notes">
+                        In conclusion ... <br />
                         Good Methods <br />
                         Good Code <br />
                         Good Data
@@ -699,6 +704,12 @@
                         Negatives just as important - remember to normalise
                     </aside>
                 </section>
+
+                <section>
+                    <h3>Case Study: Performance Problem with high System Time</h3>
+                    <p>Hypothesis: caused by Disk I/O</p>
+                </section>
+
                 <section>
                     <img src="imgs/correlation.png" />
                 <p>Correlation Strength: 0.78453</p>
@@ -777,7 +788,8 @@
                     Avoid over fitting your training set <br />
                     Hold data back <br />
                     Re-test on held back data - use that as your measure <br />
-                    shows your idea generalizes
+                    shows your idea generalizes <br />
+                    Provides a proxy on the true error that you don't get with training set.
                 </aside>
             </section>
 
@@ -823,18 +835,19 @@
             <section>
                 <img src="imgs/under-fitting.png" />
                 <aside class="notes">
-                   Bias: <br />
+                   Underfitting: <br />
                       The less data you have the easier it is to fit, thus error will be low on the training set. <br />
                       However it will not generalise well so high error on validation set. <br />
                       The more data you get the harder it is to fit the training set thus error on training set increases. <br />
                       However the increased number of samples does help fit the validation set (but poorly) <br />
-                      Eventualy cv error ~= training error
+                      Eventualy cv error ~= training error <br />
+                      HIGH ERROR RATE
                 </aside>
             </section>
             <section>
                 <img src="imgs/over-fitting.png" />
                 <aside class="notes">
-                   Variance: <br />
+                   Overfitting: <br />
                       Fits training very well, adding more samples does not increase error much <br />
                       CV error is high, but does not reduce much hence they are far apart <br />
                 </aside>
