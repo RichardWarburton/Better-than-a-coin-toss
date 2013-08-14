@@ -75,6 +75,7 @@
                         <li>Applying the Theory</li>
                     </ul>
                     <aside class="notes">
+                        Richard first </br>
                         define structure of the talk
 					</aside>
 				</section>
@@ -82,6 +83,7 @@
                 <section>
                     <img src="imgs/Moneyballsbn.jpg" />
                     <aside class="notes">
+                        John </br>
                         Sport - pundits are useless sheep.<br />
                         Billy Beane managed Oakland Athletics <br />
                         Bill James developed Sabermetrics <br />
@@ -93,6 +95,7 @@
                     <img src="imgs/nate-silver.jpg" />
                     
                     <aside class="notes">
+                        Richard </br>
                         Politics:
                             2008 and 2012 elections had predictable results.
                             Nate Silver combined individual poll ratings.
@@ -103,6 +106,7 @@
                 <section>
                     <img src="imgs/fivethirtyeight-0909-signal1-blog480.png" />
                     <aside class="notes">
+                        Richard </br>
                         Improvement over time
                         meterology
                         hurricane
@@ -112,6 +116,7 @@
                 <section>
                     <h2>'Experts" aren't very good</h2>
                     <aside class="notes">
+                        John </br>
                         Across a wide variety of industries <br />
                         If just a someone's opinion <br />
                         people put too much value in their own predictive power
@@ -122,6 +127,7 @@
                     <img src="imgs/111026_SCI_kahneman.jpg.CROP.rectangle3-large.jpg" />
                     
                     <aside class="notes">
+                        John </br>
                         <br /> Daniel Kahneman and Amos Tversky
                         <br /> Nobel Prize in Economics Sciences
                         <br /> Prospect Theory - explain poor decision making when risk is a factor.
@@ -133,6 +139,7 @@
                 <section>
                     <h1>Big Data solves ALL KNOWN PROBLEMS</h1>
                     <aside class="notes">
+                        Richard </br>
                         Message from conference Scene
                         <br />Just need to use hadoop with some nosql database
                         <br /> everything will be magically better
@@ -143,6 +150,7 @@
                     <h1>Big Data <strike>solves ALL KNOWN PROBLEMS</strike></h1>
                     <h3> ... helps </h3>
                     <aside class="notes">
+                        Richard </br>
                         <br />recording data not enough
                         <br />need to know how to analyse it
                         <br />New problem: validation
@@ -152,6 +160,7 @@
                 <section>
                     <h1>Validation = Tests for Data</h1>
                     <aside class="notes">
+                        Richard </br>
                         explain validation <br />
                         You wouldn’t trust software without testing it - how do you trust your numbers? <br />
                         We've all seen the value of automated testing, CI, TDD in software development <br />
@@ -162,6 +171,7 @@
                 <section data-transition="linear" data-background="#007777" data-background-transition="slide">
                     <h1>Part 1: Fundamentals</h1>
                     <aside class="notes">
+                        John </br>
                         Talk about fundamentals, by which we mean basic statistics. <br />
                         Probably familiar to some, but important to cover fundamentals.
                     </aside>
@@ -171,6 +181,7 @@
                     <h2>Null Hypothesis</h2>
                     <p>Until proven otherwise there is no relationship between phenomena</p>
                     <aside class="notes">
+                        John </br>
                         <p>Refuting The Null Hypothesis is to present evidence that there is a relationship</p>
                         <p>Hypothesis: the loss of my socks is due to alien burglary</p>
                         <p>Null Hypothesis: the loss of my socks is not caused by an alien burglary</p>
@@ -217,6 +228,7 @@
                     <br />
                     <br />
                     <aside class="notes">
+                        John </br>
                         <h4>False Positives vs False Negatives</h4>
                         FN or type I error - when the null hypothesis (H0) is true, but is rejected <br />
                         FP or type II error - when the null hypothesis (H0) is false, but is accepted
@@ -226,6 +238,7 @@
                 <section>
                     <h2>Why is this important?</h2>
                     <aside class="notes">
+                        Richard </br>
                         FP and FN not equal <br />
                         Depend on business needs and context. <br />
                         Different people value them differently.
@@ -236,6 +249,7 @@
                     <blockquote>It is better that ten guilty persons escape than that one innocent suffer</blockquote>
                     <p>- William Blackstone</p>
                     <aside class="notes">
+                        Richard </br>
                         Innocent until proven guilty <br />
                         The law considers FP more harmful than FN.
                     </aside>
@@ -244,6 +258,7 @@
                 <section>
                     <img src="imgs/sleazy-salesman.jpg" />
                     <aside class="notes">
+                        Richard </br>
                         Estate Agents would rather show people the wrong house than miss out on a sale.
                     </aside>
                 </section>
@@ -255,6 +270,7 @@
                     <img height="128px" src="imgs/buggy-sm.png" />
                     <img height="128px" src="imgs/coverity.jpg" />
                     <aside class="notes">
+                        Richard </br>
                         Coverity published research findings that low false positive rates are good for business. <br />
                         If you tell developers there's a bug and there isn't one - they lose confidence in your tooling. <br />
                         But they aren't expecting you to find all the bugs in their code. <br />
@@ -276,6 +292,7 @@
                     <h2>Choose the right measurement</h2>
                     <p>There's more than one concept of accuracy</p>
                     <aside class="notes">
+                        John </br>
                         Most people think of 'accuracy' <br />
                         Accuracy: what you got right / everything <br />
                         Not an appropriate measurement for all situations.
@@ -286,6 +303,7 @@
                     <h2>Recall</h2>
                     <p>number of true positives / number of actually true values</p>
                     <aside class="notes">
+                        John </br>
                         Proportion of true values you've found. <br />
                         How how much did you get right?<br />
                         Low score = too many FNs.<br />
@@ -297,6 +315,7 @@
                     <h2>Precision</h2>
                     <p>number of true positives / predicted true value</p>
                     <aside class="notes">
+                        John </br>
                         Proportion of your claimed truths which were true. <br />
                         Low score = too many FPs.<br />
                         Irrational Optimist (Dot Com Boom)
@@ -307,6 +326,7 @@
                     <h2>F Measure</h2>
                     <img src="imgs/fmeasure.jpg" />
                     <aside class="notes">
+                        Richard </br>
                         Weighted tradeoff between precision and recall. <br />
                         We need to have a balance between each. <br />
                         Won't explain formula, go read about it. <br />
@@ -324,6 +344,7 @@
                     <p>Our algorithm ~= 0.9 accuracy and F1 ~= 0.9</p>
 
                     <aside class="notes">
+                        Richard </br>
                         We designed an algorithm to detect memory leaks using GC Logs. <br />
                         Had to evaluate several algorithmic choices. <br />
                         Had to prove we're better than a coin. <br />
@@ -337,6 +358,7 @@
                     <h3>Problem: Reliability of measurement</h3>
                     <img src="imgs/Steady-vs-erratic-jmsr.png" />
                     <aside class="notes">
+                        Richard </br>
                         Common problem in benchmarking <br />
                         Measurement needs to be reliable and trustworthy.
                     </aside>
@@ -345,6 +367,10 @@
                 <section>
                     <h3>Rule of thumb</h3>
                     <p>If it looks like random noise, it probably is random noise.</p>
+                    
+                    <aside class="notes">
+                        John </br>
+                    </aside>
                 </section>
                 
                 <section>
@@ -355,6 +381,7 @@
                     <p>Coefficient of Variation = Standard Deviation / Mean <p>
 
                     <aside class="notes">
+                        John </br>
                         Formalise the rule of thumb. <br />
                         CoV allows you to threshold abstracting away how big your S.D is.
                     </aside>
@@ -365,6 +392,7 @@
                     <img src="imgs/wygh.jpg" />
 
                     <aside class="notes">
+                        John </br>
                         For non-normal, the standard deviation can be a terrible estimator of scale. <br />
                         For example, in the presence of a single outlier, the standard deviation can grossly overestimate the variability of the data <br />
                         how long people spend reading your blog <br />
@@ -374,6 +402,7 @@
                 <section>
                     <img src="imgs/black+swan+taleb.jpg" />
                     <aside class="notes">
+                        Richard </br>
                         Nassim Nicholas Taleb <br />
                         high-profile rare events are incredibly important <br />
                         hard to predict because they're rare and aren't normally distributed<br />
@@ -383,12 +412,16 @@
 
                 <section>
                     <h2>Solution: Go MAD</h2>
+                    <aside class="notes">
+                        Richard </br>
+                    </aside>
                 </section>
                 
                 <section>
                     <h3>Median Absolute Deviation</h3>
                     <img src="imgs/mad.jpg" />
                     <aside class="notes">
+                        Richard </br>
                         replace the use of mean with median when calculating s.d. then divide by median. <br />
                         More resiliant to outliers. <br />
                         Used in analysing GC, since S.D. was prone to outlier effects, eg app-server startup times. <br />
@@ -397,16 +430,23 @@
                 
                 <section>
                     <h3>Problem: Experimental Flukes</h3>
+                    <aside class="notes">
+                        John </br>
+                    </aside>
                 </section>
                 
                 <section>
                     <h3>Is your A/B test a heisen test?</h3>
+                    <aside class="notes">
+                        John </br>
+                    </aside>
                 </section>
 
                 <section>
                     <h3>Solution: P-Value</h3>
                     <img src="imgs/P-value_Graph.jpg" />
                     <aside class="notes">
+                        John </br>
                         Probability that you’ve fluked your way to the result that you got. <br />
                         Threshold at 5% or 1%. <br />
                         formula per distribution <br />
@@ -419,6 +459,7 @@
                 <section>
                     <h2>Science Works - B****es!</h2>
                     <aside class="notes">
+                        Richard </br>
                         Dawkins or XKCD <br />
                         find the right measure for your problem <br />
                         find a way of having confidence in your measurement
