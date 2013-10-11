@@ -27,6 +27,7 @@
 		</script>
 		
 		<script type="text/javascript" src="lib/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		<link rel="stylesheet" href="css/custom.css">
 
 		<!--[if lt IE 9]>
 		<script src="reveal.js/lib/js/html5shiv.js"></script>
@@ -315,7 +316,7 @@
 
                 <section>
                     <h2>Precision</h2>
-                    <p>number of true positives / predicted true value</p>
+                    <p>$$number\:of\:true\:positives \over predicted\:true\:value$$</p>
                     <aside class="notes">
                         John </br>
                         Proportion of your claimed truths which were true. <br />
@@ -326,7 +327,9 @@
 
                 <section>
                     <h2>F Measure</h2>
-                    <img src="imgs/fmeasure.jpg" />
+                    <div style="position: fixed;left:-300px">
+                      <p>$$ F_\beta = { { (1 + \beta ^ 2) \cdot true\:positive } \over { (1 + \beta ^ 2) \cdot true\:positive + \beta ^ 2 \cdot false\:negative + false\:positive } } $$</p>
+                    </div>
                     <aside class="notes">
                         Richard </br>
                         Weighted tradeoff between precision and recall. <br />
@@ -379,8 +382,8 @@
                     <h3>Solution: Check your data</h3>
                     <br />
                     <p>Low Standard Deviation</p>
-                    <img src="imgs/standard-deviation.jpg" />
-                    <p>Coefficient of Variation = Standard Deviation / Mean <p>
+                    <p>$$S_N=\sqrt { {1 \over N}  \sum ^ N _{i=1} (x_i - \bar x)^2 }$$</p>
+                    <p>$$Coefficient\:of\:Variation = {Standard\:Deviation \over Mean}$$<p>
 
                     <aside class="notes">
                         John </br>
@@ -421,7 +424,7 @@
                 
                 <section>
                     <h3>Median Absolute Deviation</h3>
-                    <img src="imgs/mad.jpg" />
+                    <p>$$MAD=median_i(|X_i-median_j(X_j)|)$$</p>
                     <aside class="notes">
                         Richard </br>
                         replace the use of mean with median when calculating s.d. then divide by median. <br />
@@ -724,8 +727,8 @@
                 </section>
 
                 <section>
-                    <h1>Pearson Correlation</h1>
-                    <img src="imgs/pearsons.png" style="float:left"/>
+                    <h2>Pearson Correlation</h2>
+                    <p>$$\rho_{X,Y} = {cov(X,Y) \over {\sigma_X\sigma_Y}} = {E[(X-\mu_X)(Y-\mu_Y)] \over {\sigma_X\sigma_Y}}$$</p>
                     <p>Err...Just look it up</p></br>
                     
                     <p>(Assumes linear relationship)<p/>
