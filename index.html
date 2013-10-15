@@ -172,7 +172,7 @@
 				</section>
 
                 <section data-transition="linear" data-background="#007777" data-background-transition="slide">
-                    <h1>Part 1: Fundamentals</h1>
+                    <h1>Fundamentals</h1>
                     <aside class="notes">
                         John </br>
                         Talk about fundamentals, by which we mean basic statistics. <br />
@@ -405,7 +405,7 @@
                 </section>
 
                 <section>
-                    <img src="imgs/black+swan+taleb.jpg" />
+                    <img height="600px" src="imgs/black+swan+taleb.jpg" />
                     <aside class="notes">
                         Richard </br>
                         Nassim Nicholas Taleb <br />
@@ -416,14 +416,7 @@
                 </section>
 
                 <section>
-                    <h2>Solution: Go MAD</h2>
-                    <aside class="notes">
-                        Richard </br>
-                    </aside>
-                </section>
-                
-                <section>
-                    <h3>Median Absolute Deviation</h3>
+                    <h3>Go MAD (Median Absolute Deviation)</h3>
                     <p>$$MAD=median_i(|X_i-median_j(X_j)|)$$</p>
                     <aside class="notes">
                         Richard </br>
@@ -450,14 +443,20 @@
                 <section>
                     <h3>Solution: P-Value</h3>
                     <img src="imgs/P-value_Graph.jpg" />
+                    <p>
+                        Many tests: eg Chi-Squared or Student's T
+                    </p>
+                    <p>
+                        How many times do you need to roll heads before you know your coin isn't biased?
+                    </p>
                     <aside class="notes">
                         John </br>
                         Probability that you’ve fluked your way to the result that you got. <br />
                         Threshold at 5% or 1%. <br />
                         formula per distribution <br />
-                            google it <br />
                             where do you lie <br />
                             integrate away from the mean <br />
+                        One sided vs Two sided test <br />
                     </aside>
                 </section>
 
@@ -473,7 +472,6 @@
 
                 <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
                     <h1>Practical Problems</h1>
-                    <h3>Part 2</h3>
                     <aside class="notes">
                         Talked a lot about theory - this isn't High School Maths! <br />
                         what gets in the way of applying the theory <br />
@@ -560,7 +558,7 @@
                     <br />
 
                     <blockquote>Marriage should continue to be defined as a life-long exclusive commitment between a man and a woman</blockquote>
-                    <p class="fragment">Comres + Catholic Voices: 22% vs 70%</p>
+                    <p class="fragment">Comres: 22% vs 70%</p>
                     <aside class="notes">
                         Leading Questions <br />
                         Opinion polling on gay marriage. <br />
@@ -629,6 +627,7 @@
                     <p>Make sure to randomise the order of answers </p>
                 </section>
 
+<!--
                     <section>
                         <h3>What will the next crisis in Washington be?</h3>
                         <br />
@@ -648,6 +647,7 @@
                             Easy to do the same in your questioning.
                         </aside>
                     </section>
+-->
 
                     <section>
                         <h3>Problem: Correlation doesn’t imply Causality</h3>
@@ -712,7 +712,7 @@
                 </section>
 
                 <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-                    <h1>Part 3: Applying the Theory</h1>
+                    <h1>Applying the Theory</h1>
                     <aside class="notes">
                         Provide some examples of how we've applied Stats + ML at jClarity.
                     </aside>
@@ -788,7 +788,17 @@
             </section>
 
             <section>
-                <h3>Where's the elbow?</h3>
+                <h3>How many clusters?</h3>
+                <img src="imgs/bad_k_1.png" />
+            </section>
+
+            <section>
+                <h3>How many clusters?</h3>
+                <img src="imgs/okish_k_2.jpg" />
+            </section>
+
+            <section>
+                <h3>Solution: Elbow Estimators</h3>
                 <img src="imgs/DataClustering_ElbowCriterion.JPG" />
                 <aside class="notes">
                 Explain Hyper Parameter Optimisation <br />
