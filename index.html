@@ -25,6 +25,9 @@
 		<script>
 			document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
+		
+		<script type="text/javascript" src="lib/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		<link rel="stylesheet" href="css/custom.css">
 
 		<!--[if lt IE 9]>
 		<script src="reveal.js/lib/js/html5shiv.js"></script>
@@ -169,7 +172,7 @@
 				</section>
 
                 <section data-transition="linear" data-background="#007777" data-background-transition="slide">
-                    <h1>Part 1: Fundamentals</h1>
+                    <h1>Fundamentals</h1>
                     <aside class="notes">
                         John </br>
                         Talk about fundamentals, by which we mean basic statistics. <br />
@@ -301,7 +304,7 @@
 
                 <section>
                     <h2>Recall</h2>
-                    <p>number of true positives / number of actually true values</p>
+                    <p>$$ number\:of\:true\:positives \over number\:of\:actually\:true\:values $$</p>
                     <aside class="notes">
                         John </br>
                         Proportion of true values you've found. <br />
@@ -313,7 +316,7 @@
 
                 <section>
                     <h2>Precision</h2>
-                    <p>number of true positives / predicted true value</p>
+                    <p>$$number\:of\:true\:positives \over predicted\:true\:value$$</p>
                     <aside class="notes">
                         John </br>
                         Proportion of your claimed truths which were true. <br />
@@ -324,7 +327,9 @@
 
                 <section>
                     <h2>F Measure</h2>
-                    <img src="imgs/fmeasure.jpg" />
+                    <div style="position: fixed;left:-300px">
+                      <p>$$ F_\beta = { { (1 + \beta ^ 2) \cdot true\:positive } \over { (1 + \beta ^ 2) \cdot true\:positive + \beta ^ 2 \cdot false\:negative + false\:positive } } $$</p>
+                    </div>
                     <aside class="notes">
                         Richard </br>
                         Weighted tradeoff between precision and recall. <br />
@@ -377,8 +382,8 @@
                     <h3>Solution: Check your data</h3>
                     <br />
                     <p>Low Standard Deviation</p>
-                    <img src="imgs/standard-deviation.jpg" />
-                    <p>Coefficient of Variation = Standard Deviation / Mean <p>
+                    <p>$$S_N=\sqrt { {1 \over N}  \sum ^ N _{i=1} (x_i - \bar x)^2 }$$</p>
+                    <p>$$Coefficient\:of\:Variation = {Standard\:Deviation \over Mean}$$<p>
 
                     <aside class="notes">
                         John </br>
@@ -400,7 +405,7 @@
                 </section>
 
                 <section>
-                    <img src="imgs/black+swan+taleb.jpg" />
+                    <img height="600px" src="imgs/black+swan+taleb.jpg" />
                     <aside class="notes">
                         Richard </br>
                         Nassim Nicholas Taleb <br />
@@ -411,15 +416,8 @@
                 </section>
 
                 <section>
-                    <h2>Solution: Go MAD</h2>
-                    <aside class="notes">
-                        Richard </br>
-                    </aside>
-                </section>
-                
-                <section>
-                    <h3>Median Absolute Deviation</h3>
-                    <img src="imgs/mad.jpg" />
+                    <h3>Go MAD (Median Absolute Deviation)</h3>
+                    <p>$$MAD=median_i(|X_i-median_j(X_j)|)$$</p>
                     <aside class="notes">
                         Richard </br>
                         replace the use of mean with median when calculating s.d. then divide by median. <br />
@@ -445,14 +443,20 @@
                 <section>
                     <h3>Solution: P-Value</h3>
                     <img src="imgs/P-value_Graph.jpg" />
+                    <p>
+                        Many tests: eg Chi-Squared or Student's T
+                    </p>
+                    <p>
+                        How many times do you need to roll heads before you know your coin isn't biased?
+                    </p>
                     <aside class="notes">
                         John </br>
                         Probability that you’ve fluked your way to the result that you got. <br />
                         Threshold at 5% or 1%. <br />
                         formula per distribution <br />
-                            google it <br />
                             where do you lie <br />
                             integrate away from the mean <br />
+                        One sided vs Two sided test <br />
                     </aside>
                 </section>
 
@@ -468,7 +472,6 @@
 
                 <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
                     <h1>Practical Problems</h1>
-                    <h3>Part 2</h3>
                     <aside class="notes">
                         Talked a lot about theory - this isn't High School Maths! <br />
                         what gets in the way of applying the theory <br />
@@ -562,7 +565,7 @@
                     <br />
 
                     <blockquote>Marriage should continue to be defined as a life-long exclusive commitment between a man and a woman</blockquote>
-                    <p class="fragment">Comres + Catholic Voices: 22% vs 70%</p>
+                    <p class="fragment">Comres: 22% vs 70%</p>
                     <aside class="notes">
                         Leading Questions <br />
                         Opinion polling on gay marriage. <br />
@@ -631,6 +634,7 @@
                     <p>Make sure to randomise the order of answers </p>
                 </section>
 
+<!--
                     <section>
                         <h3>What will the next crisis in Washington be?</h3>
                         <br />
@@ -650,6 +654,7 @@
                             Easy to do the same in your questioning.
                         </aside>
                     </section>
+-->
 
                     <section>
                         <h3>Problem: Correlation doesn’t imply Causality</h3>
@@ -717,7 +722,7 @@
                 </section>
 
                 <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-                    <h1>Part 3: Applying the Theory</h1>
+                    <h1>Applying the Theory</h1>
                     <aside class="notes">
                         Provide some examples of how we've applied Stats + ML at jClarity.
                     </aside>
@@ -732,8 +737,8 @@
                 </section>
 
                 <section>
-                    <h1>Pearson Correlation</h1>
-                    <img src="imgs/pearsons.png" style="float:left"/>
+                    <h2>Pearson Correlation</h2>
+                    <p>$$\rho_{X,Y} = {cov(X,Y) \over {\sigma_X\sigma_Y}} = {E[(X-\mu_X)(Y-\mu_Y)] \over {\sigma_X\sigma_Y}}$$</p>
                     <p>Err...Just look it up</p></br>
                     
                     <p>(Assumes linear relationship)<p/>
@@ -793,7 +798,17 @@
             </section>
 
             <section>
-                <h3>Where's the elbow?</h3>
+                <h3>How many clusters?</h3>
+                <img src="imgs/bad_k_1.png" />
+            </section>
+
+            <section>
+                <h3>How many clusters?</h3>
+                <img src="imgs/okish_k_2.jpg" />
+            </section>
+
+            <section>
+                <h3>Solution: Elbow Estimators</h3>
                 <img src="imgs/DataClustering_ElbowCriterion.JPG" />
                 <aside class="notes">
                 Explain Hyper Parameter Optimisation <br />
@@ -930,6 +945,14 @@
                 <img src="imgs/learning-curve2.png" />
                 <aside class="notes">
                     Divergence did happen above 2000 nodes
+                </aside>
+            </section>
+
+            <section>
+                <img src="imgs/learning-curve-f1-2.png" />
+                <aside class="notes">
+                   As we have said, accuracy can be misleading, here is the graph with F1 score
+                   Note higher is better
                 </aside>
             </section>
 
