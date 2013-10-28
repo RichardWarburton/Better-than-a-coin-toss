@@ -46,6 +46,7 @@
                     <img height="300px" src="imgs/2275021-two_face.jpg" />
 
 					<aside class="notes">
+					<p style="background-color: red">RICHARD</p>
 					</aside>
 				</section>
 
@@ -53,7 +54,7 @@
                     <img src="imgs/mad_men.jpg" />
 
 					<aside class="notes">
-			<p style="background-color: red">RICHARD</p>
+                        <p style="background-color: red">RICHARD</p>
                         <br /> Display Advertising
                         <br /> Complex internal algorithm
                         <br /> Baselined by an expert found to be no better than randomly selecting adverts
@@ -312,13 +313,16 @@
                 <section>
                     <h2>Recall</h2>
                     <br />
-                    <p>$$ number\:of\:true\:positives \over number\:of\:actually\:true\:values $$</p>
+                    <p>$$Recall={number\:of\:true\:positives \over number\:of\:actually\:true\:values}$$</p>
+                    <br />
+                    <p>$$Recall={t_p \over t_p+f_n}$$</p>
                     <br />
                     <p><small>Also called True Positive Rate or Sensitivity</small></p>
                     <aside class="notes">
                         <p style="background-color: blue">JOHN</p>
                         Proportion of true values you've found. <br />
                         How how much did you get right?<br />
+                        High if you are finding the positives<br/>
                         Irrational Skeptic (Richard's Dad)
                     </aside>
                 </section>
@@ -326,22 +330,25 @@
                 <section>
                     <h2>Precision</h2>
                     <br />
-                    <p>$$number\:of\:true\:positives \over predicted\:true\:value$$</p>
+                    <p>$$Precision={number\:of\:true\:positives \over predicted\:true\:value}$$</p>
+                    <br />
+                    <p>$$Precision={t_p \over {t_p+f_p}}$$</p>
                     <br />
                     <p><small>Also called Positive Predicted Value</small></p>
                     <aside class="notes">
                         <p style="background-color: blue">JOHN</p>
                         Proportion of your claimed truths which were true. <br />
                         If you say its right, is it really right?<br />
+                        High if the positives you found were right<br/>
                         Irrational Optimist (Dot Com Boom)
                     </aside>
                 </section>
 
                 <section>
                     <h2>F Measure</h2>
-                    <div style="position: fixed;left:-300px">
-                      <p>$$ F_\beta = { { (1 + \beta ^ 2) \cdot true\:positive } \over { (1 + \beta ^ 2) \cdot true\:positive + \beta ^ 2 \cdot false\:negative + false\:positive } } $$</p>
-                    </div>
+                    <span>
+                      <p>$$ F_\beta = { { (1 + \beta ^ 2) \cdot t_p } \over { (1 + \beta ^ 2) \cdot t_p + \beta ^ 2 \cdot f_n + f_p } } $$</p>
+                    </span>
                     <aside class="notes">
                         <p style="background-color: red">RICHARD</p>
                         Weighted tradeoff between precision and recall. <br />
@@ -394,8 +401,8 @@
                     <h3>Solution: Check your data</h3>
                     <br />
                     <p>Low Standard Deviation</p>
-                    <p>$$S_N=\sqrt { {1 \over N}  \sum ^ N _{i=1} (x_i - \bar x)^2 }$$</p>
-                    <p>$$Coefficient\:of\:Variation = {Standard\:Deviation \over Mean}$$<p>
+                    <p>$$\sigma=\sqrt { {1 \over N}  \sum ^ N _{i=1} (x_i - \bar x)^2 }$$</p>
+                    <p>$$Coefficient\:of\:Variation = {\sigma \over Mean}$$<p>
 
                     <aside class="notes">
                         <p style="background-color: blue">JOHN</p>
@@ -658,7 +665,8 @@
                 </section>
 
                 <section>
-                    <h3>Bias towards the first answer of a question</h3>
+                    <h3>Bias towards the first</h3>
+                    <h3>answer of a question</h3>
                     <p>Make sure to randomise the order of answers </p>
                     <aside class="notes">
                         <p style="background-color: red">RICHARD</p>
@@ -698,7 +706,8 @@
                     </section>
                     
                     <section>
-                        <h3>Database and network activity correlating</h3>
+                        <h3>Database and network</h3>
+                        <h3>activity correlating</h3>
                         <p>Performance Diagnosis: was actually a Garbage Collection Problem.</p>
                         <aside class="notes">
                             <p style="background-color: blue">JOHN</p>
@@ -719,7 +728,7 @@
                 </section>
 
                 <section>
-                    <img src="imgs/blog_raf_bullet_holes_0.jpg">
+                    <img src="imgs/blog_raf_bullet_holes_0.jpg" style="width: 600px"></img>
                     <aside class="notes">
                         <p style="background-color: red">RICHARD</p>
                         WWII - Adding armour in the wrong place didn't improve matters. <br />
@@ -851,7 +860,7 @@
 
             <section>
                 <h3>How many clusters?</h3>
-                <img src="imgs/okish_k_2.jpg" />
+                <img style="width: 500px" src="imgs/okish_k_2.jpg" />
                 <aside class="notes">
                     <p style="background-color: red">RICHARD</p>
                 </aside>
@@ -859,7 +868,7 @@
 
             <section>
                 <h3>Solution: Elbow Estimators</h3>
-                <img src="imgs/DataClustering_ElbowCriterion.JPG" />
+                <img style="width: 700px" src="imgs/DataClustering_ElbowCriterion.JPG" />
                 <aside class="notes">
                 <p style="background-color: red">RICHARD</p>
                 Explain Hyper Parameter Optimisation <br />
@@ -961,7 +970,7 @@
             </section>
             <section>
                 <h2>Under-fitting (Bias)</h2>
-                <img src="imgs/under-fitting.png" />
+                <img style="width: 700px" src="imgs/under-fitting.png" />
                 <aside class="notes">
                   <p style="background-color: blue">JOHN</p>
                    Underfitting: <br />
@@ -975,7 +984,7 @@
             </section>
             <section>
                 <h2>Over-fitting (Variance)</h2>
-                <img src="imgs/over-fitting.png" />
+                <img style="width: 700px" src="imgs/over-fitting.png" />
                 <aside class="notes">
                   <p style="background-color: blue">JOHN</p>
                    Overfitting: <br />
