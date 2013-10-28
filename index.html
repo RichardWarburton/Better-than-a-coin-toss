@@ -304,23 +304,28 @@
 
                 <section>
                     <h2>Recall</h2>
+                    <br />
                     <p>$$ number\:of\:true\:positives \over number\:of\:actually\:true\:values $$</p>
+                    <br />
+                    <p><small>Also called True Positive Rate or Sensitivity</small></p>
                     <aside class="notes">
                         John </br>
                         Proportion of true values you've found. <br />
                         How how much did you get right?<br />
-                        Low score = too many FNs.<br />
                         Irrational Skeptic (Richard's Dad)
                     </aside>
                 </section>
 
                 <section>
                     <h2>Precision</h2>
+                    <br />
                     <p>$$number\:of\:true\:positives \over predicted\:true\:value$$</p>
+                    <br />
+                    <p><small>Also called Positive Predicted Value</small></p>
                     <aside class="notes">
                         John </br>
                         Proportion of your claimed truths which were true. <br />
-                        Low score = too many FPs.<br />
+                        If you say its right, is it really right?<br />
                         Irrational Optimist (Dot Com Boom)
                     </aside>
                 </section>
@@ -350,7 +355,7 @@
 
                     <aside class="notes">
                         Richard </br>
-                        We designed an algorithm to detect memory leaks using GC Logs. <br />
+                        We designed an algorithm to detect memory leaks using Garbage Collection Logs. <br />
                         Had to evaluate several algorithmic choices. <br />
                         Had to prove we're better than a coin. <br />
                         Baseline: either say yes or no to everything. <br />
@@ -422,7 +427,7 @@
                         Richard </br>
                         replace the use of mean with median when calculating s.d. then divide by median. <br />
                         More resiliant to outliers. <br />
-                        Used in analysing GC, since S.D. was prone to outlier effects, eg app-server startup times. <br />
+                        Used in analysing Garbage Collection, since S.D. was prone to outlier effects, eg app-server startup times. <br />
                     </aside>
                 </section>
                 
@@ -660,12 +665,12 @@
                     
                     <section>
                         <h3>Database and network activity correlating</h3>
-                        <p>Performance Diagnosis: was actually a GC Problem.</p>
+                        <p>Performance Diagnosis: was actually a Garbage Collection Problem.</p>
                         <aside class="notes">
-                        What is causing what? <br />
-                        correlation can be nonsense <br />
-                        Common root cause: GC pause affected both Networking and DB threads.
-                    </aside>
+                            What is causing what? <br />
+                            correlation can be nonsense <br />
+                            Common root cause: GC pause affected both Networking and DB threads.
+                        </aside>
                 </section>
 
                 <section>
@@ -889,6 +894,7 @@
                 </aside>
             </section>
             <section>
+                <h2>Under-fitting (Bias)</h2>
                 <img src="imgs/under-fitting.png" />
                 <aside class="notes">
                    Underfitting: <br />
@@ -901,6 +907,7 @@
                 </aside>
             </section>
             <section>
+                <h2>Over-fitting (Variance)</h2>
                 <img src="imgs/over-fitting.png" />
                 <aside class="notes">
                    Overfitting: <br />
@@ -921,24 +928,28 @@
                     If they diverge then they can fit the training set but it does not generalise to the validation set...probably over fitting.
                 </aside>
             </section>
+
+            <!--
             <section>
                 <img src="imgs/learning-curve.png" />
                 <aside class="notes">
+                </aside>
+            </section>
+            -->
+            <section>
+                <h3>Accuracy for different Tree sizes</h3>
+                <img src="imgs/learning-curve2.png" />
+                <aside class="notes">
+                    Divergence did happen above 2000 nodes
                     In our case validation error drops with training error <br />
                     Possible bias problem as error remains fairly high however 10% was acceptable for our purposes <br />
                     Improvement over 64 nodes is relatively small so we can save some clock cycles and limit tree sizes to 64. <br />
                     Validation data is also from a different source showing model generalises
                 </aside>
             </section>
-            
-            <section>
-                <img src="imgs/learning-curve2.png" />
-                <aside class="notes">
-                    Divergence did happen above 2000 nodes
-                </aside>
-            </section>
 
             <section>
+                <h3>F1 for different Tree sizes</h3>
                 <img src="imgs/learning-curve-f1-2.png" />
                 <aside class="notes">
                    As we have said, accuracy can be misleading, here is the graph with F1 score
